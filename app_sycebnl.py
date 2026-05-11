@@ -1,4 +1,5 @@
 import os
+import requests
 import streamlit as st
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -14,24 +15,51 @@ st.markdown("Posez vos questions sur le SYCEBNL, la loi sur les associations et 
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
+# IDs des fichiers Google Drive
+FICHIERS_DRIVE = {
+    "audcif.pdf"                      : "1zX4w8Qwg5lLjFkLrMa9LIwGd8lRyly28",
+    "guide_application_sycebnl.pdf"   : "1bJuHOBaBYTdvEDispwpjhrVui9hJErSg",
+    "guide_application_syscohada.pdf" : "1jktfwwqKxGALOegiMQAZPueKVDYaK177",
+    "Livre_sur_les_associations.pdf"  : "1YHrNgCYmacVXUfY0fiWaXiv1G5WGqu3n",
+    "loi_sur_les_associations.pdf"    : "1ppwH7BHwiocHBTRN_hUGXiSbFVkcWo-i",
+    "sycebnl.pdf"                     : "1O6le6GKQy4AG5fEef5JB9XJX-QX6l39Z",
+    "cgi_2026.pdf"                    : "1uoBDsVF-4hftsywou6YEH60yf7Myst26",
+}
+
+def telecharger_fichiers():
+    os.makedirs("documents", exist_ok=True)
+    for nom, file_id in FICHIERS_DRIVE.items():
+        chemin = os.path.join("documents", nom)
+        if not os.path.exists(chemin):
+            st.write(f"Telechargement : {nom}...")
+            url = f"https://drive.google.com/uc?export=download&id={file_id}"
+            response = requests.get(url, stream=True)
+            with open(chemin, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+    st.write("Tous les documents sont prets !")
+
 @st.cache_resource
 def charger_chaine():
+    telecharger_fichiers()
+
     dossier_docs = "documents"
     dossier_db   = "chroma_db"
 
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
-    if os.path.exists(dossier_db):
+    if os.path.exists(dossier_db) and len(os.listdir(dossier_db)) > 0:
         vectorstore = Chroma(
             persist_directory=dossier_db,
             embedding_function=embeddings
         )
     else:
-        st.info("Indexation des documents en cours... (2-5 minutes)")
+        st.write("Indexation des documents en cours... (5-10 minutes)")
         documents = []
         for fichier in os.listdir(dossier_docs):
             if fichier.endswith('.pdf'):
                 chemin = os.path.join(dossier_docs, fichier)
+                st.write(f"Chargement : {fichier}")
                 loader = PyPDFLoader(chemin)
                 documents.extend(loader.load())
 
@@ -40,12 +68,14 @@ def charger_chaine():
             chunk_overlap=200,
         )
         morceaux = splitter.split_documents(documents)
+        st.write(f"Total morceaux : {len(morceaux)}")
 
         vectorstore = Chroma.from_documents(
             documents=morceaux,
             embedding=embeddings,
             persist_directory=dossier_db
         )
+        st.write("Base vectorielle creee !")
 
     retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
 
