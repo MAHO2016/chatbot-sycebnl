@@ -6,5 +6,8 @@ langchain-text-splitters
 langchain-core
 chromadb
 pypdf
+pypdf[full]
 tiktoken
 openai
+requests
+gdown
