@@ -31,13 +31,11 @@ def telecharger_fichiers():
     for nom, file_id in FICHIERS_DRIVE.items():
         chemin = os.path.join("documents", nom)
         if not os.path.exists(chemin):
-            st.write(f"Telechargement : {nom}...")
             url = f"https://drive.google.com/uc?export=download&id={file_id}"
             response = requests.get(url, stream=True)
             with open(chemin, "wb") as f:
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
-    st.write("Tous les documents sont prets !")
 
 @st.cache_resource
 def charger_chaine():
@@ -55,7 +53,7 @@ def charger_chaine():
             embeddings,
             allow_dangerous_deserialization=True
         )
-        st.write("Base vectorielle chargee !")
+       
     else:
         st.write("Indexation des documents en cours... (5-10 minutes)")
         documents = []
@@ -71,14 +69,14 @@ def charger_chaine():
             chunk_overlap=200,
         )
         morceaux = splitter.split_documents(documents)
-        st.write(f"Total morceaux : {len(morceaux)}")
+      
 
         vectorstore = FAISS.from_documents(
             documents=morceaux,
             embedding=embeddings
         )
         vectorstore.save_local(dossier_db)
-        st.write("Base vectorielle creee !")
+      
 
     retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
 
@@ -98,6 +96,9 @@ REGLES ABSOLUES :
   "Je ne trouve pas cette information dans les documents disponibles."
 - Tu ne confonds JAMAIS le SYCEBNL avec le Syscohada
 - Tu n'inventes JAMAIS de comptes ou d'articles
+
+- SENTIMENT
+Quand la personne te dit Merci, il faut lui répondre "Je t'en prie, je suis disponible à vous servir 24h/24"
 
 REGLE DE CONCISION :
 - Si la question est simple, tu donnes une reponse courte et directe
