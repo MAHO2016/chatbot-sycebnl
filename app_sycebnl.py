@@ -48,11 +48,14 @@ def charger_chaine():
 
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
-    if os.path.exists(dossier_db) and len(os.listdir(dossier_db)) > 0:
-        vectorstore = Chroma(
-            persist_directory=dossier_db,
-            embedding_function=embeddings
+    dossier_db = "faiss_index"
+    if os.path.exists(dossier_db):
+        vectorstore = FAISS.load_local(
+            dossier_db,
+            embeddings,
+            allow_dangerous_deserialization=True
         )
+        st.write("Base vectorielle chargee !")
     else:
         st.write("Indexation des documents en cours... (5-10 minutes)")
         documents = []
@@ -70,11 +73,11 @@ def charger_chaine():
         morceaux = splitter.split_documents(documents)
         st.write(f"Total morceaux : {len(morceaux)}")
 
-        vectorstore = Chroma.from_documents(
+        vectorstore = FAISS.from_documents(
             documents=morceaux,
-            embedding=embeddings,
-            persist_directory=dossier_db
+            embedding=embeddings
         )
+        vectorstore.save_local(dossier_db)
         st.write("Base vectorielle creee !")
 
     retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
