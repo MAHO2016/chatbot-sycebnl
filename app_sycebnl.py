@@ -3,13 +3,134 @@ import requests
 import streamlit as st
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain_core.prompts import PromptTemplate
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-st.set_page_config(page_title="Assistant SYCEBNL", layout="wide")
-st.title("Assistant SYCEBNL — Associations au Benin")
-st.markdown("Posez vos questions sur le SYCEBNL, la loi sur les associations et la fiscalite au Benin.")
+st.set_page_config(
+    page_title="ExpertAsso — Assistant SYCEBNL",
+    page_icon="🏛️",
+    layout="wide"
+)
+
+# === CSS PERSONNALISE ===
+st.markdown("""
+<style>
+    /* Header */
+    .expertasso-header {
+        background: #1A3C8A;
+        padding: 1.2rem 2rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 1rem;
+    }
+    .expertasso-logo {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #CBA135;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #1A3C8A;
+        font-family: 'Rockwell', serif;
+        flex-shrink: 0;
+    }
+    .expertasso-title {
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: bold;
+        font-family: 'Rockwell', serif;
+        margin: 0;
+    }
+    .expertasso-subtitle {
+        color: #CBA135;
+        font-size: 13px;
+        font-family: Arial, sans-serif;
+        margin: 0;
+    }
+    /* Badges */
+    .badge-container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+    .badge {
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+        font-weight: 500;
+    }
+    .badge-blue {
+        background: rgba(26,60,138,0.1);
+        color: #1A3C8A;
+        border: 1px solid #1A3C8A;
+    }
+    .badge-gold {
+        background: rgba(203,161,53,0.1);
+        color: #CBA135;
+        border: 1px solid #CBA135;
+    }
+    .badge-red {
+        background: rgba(255,0,0,0.08);
+        color: #CC0000;
+        border: 1px solid #FF0000;
+    }
+    /* Messages */
+    .stChatMessage {
+        font-family: Arial, sans-serif;
+    }
+    /* Footer */
+    .expertasso-footer {
+        background: #1A3C8A;
+        padding: 10px 2rem;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .footer-left {
+        color: rgba(255,255,255,0.5);
+        font-size: 11px;
+        font-family: Arial, sans-serif;
+    }
+    .footer-right {
+        color: #CBA135;
+        font-size: 11px;
+        font-family: Arial, sans-serif;
+    }
+    /* Masquer le menu Streamlit */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+
+# === HEADER ===
+st.markdown("""
+<div class="expertasso-header">
+    <div class="expertasso-logo">EA</div>
+    <div>
+        <p class="expertasso-title">ExpertAsso</p>
+        <p class="expertasso-subtitle">Assistant IA spécialisé SYCEBNL · Bénin</p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# === BADGES ===
+st.markdown("""
+<div class="badge-container">
+    <span class="badge badge-blue">📘 Comptabilité SYCEBNL</span>
+    <span class="badge badge-gold">⚖️ Législation Associations Bénin</span>
+    <span class="badge badge-red">🏛️ Fiscalité CGI Bénin 2026</span>
+</div>
+""", unsafe_allow_html=True)
 
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
@@ -37,16 +158,13 @@ def telecharger_fichiers():
 @st.cache_resource
 def charger_modele():
     telecharger_fichiers()
-
     dossier_docs = "documents"
     dossier_db   = "faiss_index"
-
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
     if os.path.exists(dossier_db):
         vectorstore = FAISS.load_local(
-            dossier_db,
-            embeddings,
+            dossier_db, embeddings,
             allow_dangerous_deserialization=True
         )
     else:
@@ -56,27 +174,17 @@ def charger_modele():
                 chemin = os.path.join(dossier_docs, fichier)
                 loader = PyPDFLoader(chemin)
                 documents.extend(loader.load())
-
         splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000,
-            chunk_overlap=200,
-        )
+            chunk_size=1000, chunk_overlap=200)
         morceaux = splitter.split_documents(documents)
-
         vectorstore = FAISS.from_documents(
-            documents=morceaux,
-            embedding=embeddings
-        )
+            documents=morceaux, embedding=embeddings)
         vectorstore.save_local(dossier_db)
 
     retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
-
     llm = ChatOpenAI(
-        model="gpt-4o-mini",
-        temperature=0.2,
-        api_key=OPENAI_API_KEY
-    )
-
+        model="gpt-4o-mini", temperature=0.2,
+        api_key=OPENAI_API_KEY)
     return llm, retriever
 
 
@@ -92,9 +200,10 @@ REGLES ABSOLUES :
   "Je ne trouve pas cette information dans les documents disponibles."
 - Tu ne confonds JAMAIS le SYCEBNL avec le Syscohada
 - Tu n'inventes JAMAIS de comptes ou d'articles
-- Si quelqu'un te dire Merci, réponds lui, "Je vous en prie, je suis disponible à vous servir 24h/24"
-- Si quelqu'un te dire, tu es bon, réponds lui "J'essaye de faire ma raison de vivre. Merci"
-- Pour d'autres compliments, sois courtois.
+
+REGLES DE COMPLIMENT
+- Il faut toujours vouvoyer les interlocuteurs et non les tutoyer.
+- Quand quelqu'un te dire Merci, réponds lui poliment, je vous en prie
 
 REGLE DE CONCISION :
 - Si la question est simple, tu donnes une reponse courte et directe
@@ -106,7 +215,6 @@ n'est pas precise dans l'historique, tu demandes TOUJOURS :
 "Pour vous donner l'ecriture correcte, pourriez-vous me preciser si votre
 association tient une comptabilite d'engagement ou une comptabilite de
 tresorerie ?"
-
 Si le type de comptabilite est deja precise dans l'historique, tu donnes
 directement l'ecriture sans redemander.
 
@@ -236,23 +344,20 @@ Reponse concise et adaptee :"""
 def generer_reponse(llm, retriever, historique, question):
     contexte = retriever.invoke(question)
     contexte_formate = "\n\n".join(doc.page_content for doc in contexte)
-
     historique_formate = ""
     for msg in historique[:-1]:
         role = "Utilisateur" if msg["role"] == "user" else "Assistant"
         historique_formate += f"{role}: {msg['content']}\n"
-
     prompt_final = PROMPT.format(
         context=contexte_formate,
         historique=historique_formate,
         question=question
     )
-
     reponse = llm.invoke(prompt_final)
     return reponse.content
 
 
-# Interface chat
+# === INTERFACE CHAT ===
 llm, retriever = charger_modele()
 
 if "messages" not in st.session_state:
@@ -266,7 +371,6 @@ if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
     st.session_state.messages.append({"role": "user", "content": question})
     with st.chat_message("user"):
         st.markdown(question)
-
     with st.chat_message("assistant"):
         with st.spinner("Recherche en cours..."):
             reponse = generer_reponse(
@@ -275,5 +379,20 @@ if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
                 question
             )
         st.markdown(reponse)
+    st.session_state.messages.append(
+        {"role": "assistant", "content": reponse})
 
-    st.session_state.messages.append({"role": "assistant", "content": reponse})
+# === BOUTON REINITIALISATION ===
+col1, col2, col3 = st.columns([4, 2, 4])
+with col2:
+    if st.button("🔄 Nouvelle conversation"):
+        st.session_state.messages = []
+        st.rerun()
+
+# === FOOTER ===
+st.markdown("""
+<div class="expertasso-footer">
+    <span class="footer-left">© 2026 ExpertAsso · Bénin</span>
+    <span class="footer-right">ComptaProgresso</span>
+</div>
+""", unsafe_allow_html=True)
