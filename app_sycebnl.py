@@ -267,7 +267,7 @@ def generer_reponse(llm, retriever, prompt_template, historique, question):
     return reponse.content
 
 # Interface chat
-chaine = charger_chaine()
+llm, retriever, prompt_template = charger_chaine()
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -283,7 +283,11 @@ if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
 
     with st.chat_message("assistant"):
         with st.spinner("Recherche en cours..."):
-            reponse = chaine.invoke(question)
+            reponse = generer_reponse(
+                llm, retriever, prompt_template,
+                st.session_state.messages,
+                question
+            )
         st.markdown(reponse)
 
     st.session_state.messages.append({"role": "assistant", "content": reponse})
