@@ -247,7 +247,17 @@ Reponse concise et adaptee au niveau de la question posee :
         api_key=OPENAI_API_KEY
     )
 
-return llm, retriever, prompt_template
+def charger_chaine():
+    # ... tout le code ...
+    
+    llm = ChatOpenAI(
+        model="gpt-4o-mini",
+        temperature=0.2,
+        api_key=OPENAI_API_KEY
+    )
+
+    return llm, retriever, prompt_template
+
 
 def generer_reponse(llm, retriever, prompt_template, historique, question):
     contexte = retriever.invoke(question)
