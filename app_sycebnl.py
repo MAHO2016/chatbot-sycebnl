@@ -247,14 +247,24 @@ Reponse concise et adaptee au niveau de la question posee :
         api_key=OPENAI_API_KEY
     )
 
-    chaine = (
-        {"context": retriever | format_docs, "question": RunnablePassthrough()}
-        | prompt_template
-        | llm
-        | StrOutputParser()
-    )
+return llm, retriever, prompt_template
 
-    return chaine
+def generer_reponse(llm, retriever, prompt_template, historique, question):
+    contexte = retriever.invoke(question)
+    contexte_formate = "\n\n".join(doc.page_content for doc in contexte)
+    
+    historique_formate = ""
+    for msg in historique[:-1]:
+        role = "Utilisateur" if msg["role"] == "user" else "Assistant"
+        historique_formate += f"{role}: {msg['content']}\n"
+    
+    prompt_final = prompt_template.format(
+        context=contexte_formate,
+        question=f"Historique de la conversation:\n{historique_formate}\nQuestion actuelle: {question}"
+    )
+    
+    reponse = llm.invoke(prompt_final)
+    return reponse.content
 
 # Interface chat
 chaine = charger_chaine()
