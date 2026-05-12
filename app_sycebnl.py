@@ -181,7 +181,7 @@ def charger_modele():
             documents=morceaux, embedding=embeddings)
         vectorstore.save_local(dossier_db)
 
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
     llm = ChatOpenAI(
         model="gpt-4o-mini", temperature=0.2,
         api_key=OPENAI_API_KEY)
@@ -330,6 +330,14 @@ DISTINCTIONS OBLIGATOIRES :
 2. DOCUMENTS OBLIGATOIRES mais PAS des livres comptables :
    - Le Registre des donateurs
 
+REGLE DE RECHERCHE PAR ARTICLE :
+Quand l'utilisateur demande un article specifique du SYCEBNL ou de la loi,
+cherche dans le contexte le contenu de cet article.
+Si tu ne trouves pas l'article exact, dis :
+"Je n'ai pas pu extraire cet article directement. Voici ce que je sais
+sur ce sujet d'apres les documents disponibles :"
+et donne les informations disponibles sur le sujet.
+Ne reponds JAMAIS uniquement "Je ne trouve pas" sans donner d'information utile.
 Contexte extrait des documents officiels :
 {context}
 
