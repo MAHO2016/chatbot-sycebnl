@@ -197,7 +197,7 @@ REGLES ABSOLUES :
 - Tu utilises UNIQUEMENT les informations contenues dans le contexte fourni
 - Tu n'utilises JAMAIS tes connaissances generales
 - Si l'information n'est pas dans le contexte, tu reponds :
-  "Je ne trouve pas cette information dans les documents disponibles."
+  "Je n'ai pas de réponse à cette question actuellement."
 - Tu ne confonds JAMAIS le SYCEBNL avec le Syscohada
 - Tu n'inventes JAMAIS de comptes ou d'articles
 
