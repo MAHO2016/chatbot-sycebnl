@@ -374,6 +374,14 @@ Selon l’article 19 de l’acte uniforme relatif au système comptable des enti
 L’entité n’est plus tenue de désigner un auditeur dès lors qu’elle ne remplit plus aucun des trois (3) critères fixés ci-dessus pendant les deux (2) exercices précédent l’expiration du mandat de l’auditeur.
 Pour les autres entités à but non lucratif ne remplissant pas ces critères, la nomination de l’auditeur est facultative. Elle peut toutefois être demandée en justice par au moins dix pour cent (10%) des membres.
 
+6. QUI PEUT ETRE NOMME AUDITEUR?
+L’auditeur est choisi parmi les experts-comptables inscrits au tableau de l’ordre des experts-comptables ou de l’organe qui en tient lieu, et 
+
+7. QUELLE EST LA DUREE DU MANDAT DE L'AUDITEUR?
+L'auditeur est nommé pour trois (3) exercices renouvelables une fois par l’assemblée générale ou l’instance qui en tient lieu de l’entité représentant plus de la moitié des membres présents ou représentés, ou par le bailleur de fonds et/ou l’Etat bénéficiaire du Projet de développement. 
+Toutefois, si l’entité à une existence inférieure à trois exercices, le mandat de l’auditeur est ramené à cette durée.
+
+
 
 REGLE DE RECHERCHE PAR ARTICLE :
 Quand l'utilisateur demande un article specifique du SYCEBNL ou de la loi,
