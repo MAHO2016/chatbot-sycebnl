@@ -176,9 +176,12 @@ def telecharger_fichiers():
 
 @st.cache_resource
 def charger_modele():
+    import shutil
     telecharger_fichiers()
     dossier_docs = "documents"
     dossier_db = "faiss_index"
+    if os.path.exists(dossier_db):
+        shutil.rmtree(dossier_db)
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
     if False:
