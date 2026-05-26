@@ -124,15 +124,42 @@ st.markdown("""
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 FICHIERS_DRIVE = {
-    "audcif.pdf"                      : "1zX4w8Qwg5lLjFkLrMa9LIwGd8lRyly28",
-    "guide_application_sycebnl.pdf"   : "1bJuHOBaBYTdvEDispwpjhrVui9hJErSg",
-    "guide_application_syscohada.pdf" : "1jktfwwqKxGALOegiMQAZPueKVDYaK177",
-    "Livre_sur_les_associations.pdf"  : "1YHrNgCYmacVXUfY0fiWaXiv1G5WGqu3n",
-    "loi_sur_les_associations.pdf"    : "1ppwH7BHwiocHBTRN_hUGXiSbFVkcWo-i",
-    "sycebnl.pdf"                     : "1O6le6GKQy4AG5fEef5JB9XJX-QX6l39Z",
-    "cgi_2026.pdf"                    : "1uoBDsVF-4hftsywou6YEH60yf7Myst26",
-    "AU_SYCEBNL.pdf"                  : "1PjwvGKxN4QYA4ke8gZWRYDwSWAcpfI4J",
+    "audcif.pdf"                     : "1zX4w8Qwg5lLjFkLrMa9LIwGd8lRyly28",
+    "guide_application_sycebnl.pdf"  : "1bJuHOBaBYTdvEDispwpjhrVui9hJErSg",
+    "guide_application_syscohada.pdf": "1jktfwwqKxGALOegiMQAZPueKVDYaK177",
+    "Livre_sur_les_associations.pdf" : "1YHrNgCYmacVXUfY0fiWaXiv1G5WGqu3n",
+    "loi_sur_les_associations.pdf"   : "1ppwH7BHwiocHBTRN_hUGXiSbFVkcWo-i",
+    "sycebnl.pdf"                    : "1O6le6GKQy4AG5fEef5JB9XJX-QX6l39Z",
+    "cgi_2026.pdf"                   : "1uoBDsVF-4hftsywou6YEH60yf7Myst26",
+    "AU_SYCEBNL.pdf"                 : "1PjwvGKxN4QYA4ke8gZWRYDwSWAcpfI4J",
 }
+
+# === REPONSES SENTIMENTS ===
+SENTIMENTS = {
+    "merci": "Avec plaisir ! Je suis toujours disponible pour vous aider sur le SYCEBNL et la legislation des associations au Benin. N'hesitez pas si vous avez d'autres questions.",
+    "merci beaucoup": "C'est avec grand plaisir ! Votre confiance m'honore. Je reste a votre disposition pour toute question sur le SYCEBNL, la loi sur les associations ou la fiscalite au Benin.",
+    "bonjour": "Bonjour ! Je suis ExpertAsso, votre assistant specialise dans le SYCEBNL et la legislation des associations au Benin. Comment puis-je vous aider aujourd'hui ?",
+    "bonsoir": "Bonsoir ! Je suis ExpertAsso, votre assistant specialise dans le SYCEBNL et la legislation des associations au Benin. Comment puis-je vous aider ce soir ?",
+    "bonne nuit": "Bonne nuit ! N'hesitez pas a revenir demain pour toute question sur le SYCEBNL ou la legislation des associations.",
+    "bravo": "Merci pour vos encouragements ! Je fais de mon mieux pour vous fournir des informations precises sur le SYCEBNL et la legislation des associations au Benin.",
+    "excellent": "Merci ! Je suis la pour vous accompagner dans votre comprehension du SYCEBNL et de la legislation des associations.",
+    "parfait": "Merci ! Si vous avez d'autres questions sur le SYCEBNL ou la legislation des associations, je suis a votre service.",
+    "super": "Merci pour votre retour positif ! Je reste a votre disposition pour toute autre question.",
+    "bien": "Merci ! N'hesitez pas si vous avez d'autres questions sur le SYCEBNL ou la fiscalite des associations.",
+    "ok": "Tres bien ! Y a-t-il autre chose que je puisse faire pour vous concernant le SYCEBNL ou la legislation des associations ?",
+    "d'accord": "Parfait ! Je reste disponible pour toute autre question sur le SYCEBNL ou la legislation des associations au Benin.",
+    "au revoir": "Au revoir ! Ce fut un plaisir de vous assister. N'hesitez pas a revenir pour toute question sur le SYCEBNL ou la legislation des associations au Benin.",
+    "bonne journee": "Merci, bonne journee a vous egalement ! Je reste disponible pour toute question sur le SYCEBNL.",
+    "qui es-tu": "Je suis ExpertAsso, un assistant IA specialise dans le SYCEBNL (Systeme Comptable des Entites a But Non Lucratif), la loi sur les associations au Benin et la fiscalite (CGI Benin 2026). Je suis developpe par ComptaProgresso pour accompagner les associations dans leur gestion comptable et administrative.",
+    "que peux-tu faire": "Je peux vous aider sur : les obligations comptables des associations (SYCEBNL), la legislation des associations au Benin, les questions fiscales (CGI Benin 2026), les livres comptables obligatoires, les ecritures comptables et bien plus encore !",
+}
+
+def detecter_sentiment(question):
+    question_lower = question.lower().strip()
+    for mot_cle, reponse in SENTIMENTS.items():
+        if mot_cle in question_lower:
+            return reponse
+    return None
 
 
 def telecharger_fichiers():
@@ -180,7 +207,7 @@ def charger_modele():
     return llm, retriever
 
 
-PROMPT = """Tu es un assistant specialise UNIQUEMENT dans :
+PROMPT = """Tu es ExpertAsso, un assistant specialise et bienveillant dans :
 1. Le SYCEBNL (Systeme Comptable des Entites a But Non Lucratif)
 2. La loi sur les associations au Benin
 3. Le Code General des Impots (CGI) du Benin 2026
@@ -189,13 +216,14 @@ REGLES ABSOLUES :
 - Tu utilises UNIQUEMENT les informations contenues dans le contexte fourni
 - Tu n'utilises JAMAIS tes connaissances generales
 - Si l'information n'est pas dans le contexte, tu reponds :
-  "Je n'ai pas de réponse à cette question actuellement."
+  "Je ne trouve pas cette information dans les documents disponibles."
 - Tu ne confonds JAMAIS le SYCEBNL avec le Syscohada
 - Tu n'inventes JAMAIS de comptes ou d'articles
 
-REGLES DE COMPLIMENT
-- Il faut toujours vouvoyer les interlocuteurs et non les tutoyer.
-- Quand quelqu'un te dire Merci, réponds lui poliment, je vous en prie
+REGLE SUR LES ARTICLES :
+- Quand tu trouves le contenu d'un article dans le contexte, cite-le directement
+- Ne dis JAMAIS "Je n'ai pas pu extraire cet article directement"
+- Si tu trouves l'article, donne son contenu sans introduction inutile
 
 REGLE DE CONCISION :
 - Si la question est simple, tu donnes une reponse courte et directe
@@ -210,140 +238,9 @@ tresorerie ?"
 Si le type de comptabilite est deja precise dans l'historique, tu donnes
 directement l'ecriture sans redemander.
 
-COMPTES DE REFERENCE OBLIGATOIRES :
-- Caisse : 5711
-- Banque : 5211
-- Virement de fonds : 585
-- Adherents / Fideles : 4111
-- Dimes recues : 7044
-- Dons recus : 7041
-- Cotisations : 701
-- Legs : 7042
-- Quetes et assimilees : 7044
-
-ECRITURES TYPES VALIDEES :
-
-E01 — Collecte de la dime / quete / offrande en especes :
-  Comptabilite de tresorerie (1 ecriture) :
-    Debit  5711 Caisse              X FCFA
-    Credit 7044 Dimes/quetes        X FCFA
-    Libelle : S/Encaissement des dimes
-
-  Comptabilite d'engagement (2 ecritures) :
-    Ecriture 1 :
-      Debit  4111 Fideles (Adherents)   X FCFA
-      Credit 7044 Dimes/quetes          X FCFA
-      Libelle : S/Engagement
-    Ecriture 2 :
-      Debit  5711 Caisse                X FCFA
-      Credit 4111 Fideles (Adherents)   X FCFA
-      Libelle : S/Encaissement des quetes
-
-E02 — Versement des especes en banque :
-  Tresorerie ET engagement (2 ecritures identiques) :
-    Ecriture 1 :
-      Debit  5211 Banque               X FCFA
-      Credit 585  Virement de fonds    X FCFA
-      Libelle : S/Bordereau de versement
-    Ecriture 2 :
-      Debit  585  Virement de fonds    X FCFA
-      Credit 5711 Caisse               X FCFA
-      Libelle : S/Avis de credit
-
-E03 — Reception d'un don en especes :
-  Comptabilite de tresorerie (1 ecriture) :
-    Debit  5711 Caisse    X FCFA
-    Credit 7041 Dons      X FCFA
-    Libelle : S/Reception don en especes
-
-  Comptabilite d'engagement (2 ecritures) :
-    Ecriture 1 :
-      Debit  4111 Fideles (Adherents)   X FCFA
-      Credit 7041 Dons                  X FCFA
-      Libelle : S/Engagement don
-    Ecriture 2 :
-      Debit  5711 Caisse                X FCFA
-      Credit 4111 Fideles (Adherents)   X FCFA
-      Libelle : S/Encaissement don
-
-E04 — Reception d'un don par virement bancaire :
-  Comptabilite de tresorerie (1 ecriture) :
-    Debit  5211 Banque    X FCFA
-    Credit 7041 Dons      X FCFA
-    Libelle : S/Reception don par virement
-
-  Comptabilite d'engagement (2 ecritures) :
-    Ecriture 1 :
-      Debit  4111 Fideles (Adherents)   X FCFA
-      Credit 7041 Dons                  X FCFA
-      Libelle : S/Engagement don
-    Ecriture 2 :
-      Debit  5211 Banque                X FCFA
-      Credit 4111 Fideles (Adherents)   X FCFA
-      Libelle : S/Encaissement don
-
-E05 — Reception cotisation en especes :
-  Comptabilite de tresorerie (1 ecriture) :
-    Debit  5711 Caisse                     X FCFA
-    Credit 701  Cotisations des adherents  X FCFA
-    Libelle : S/Reception cotisation
-
-  Comptabilite d'engagement (2 ecritures) :
-    Ecriture 1 :
-      Debit  4111 Fideles (Adherents)        X FCFA
-      Credit 701  Cotisations des adherents  X FCFA
-      Libelle : S/Engagement cotisation
-    Ecriture 2 :
-      Debit  5711 Caisse                     X FCFA
-      Credit 4111 Fideles (Adherents)        X FCFA
-      Libelle : S/Encaissement cotisation
-
-REGLE ABSOLUE SUR LES ECRITURES :
-- Remplace X par le montant exact mentionne par l'utilisateur
-- Ne changes JAMAIS les numeros de comptes
-- Si l'operation ne correspond a aucune ecriture ci-dessus, dis :
-  "Cette operation n'est pas encore dans ma base d'ecritures.
-   Veuillez contacter un expert-comptable."
-
-ARTICLE FONDAMENTAL — CGI BENIN ARTICLE 4-9 :
-Les associations et organismes sans but lucratif legalement constitues et dont
-la gestion est desinteressee sont EXONERES de l'impot sur les societes.
-Conditions :
-a) Gere a titre benevole — remuneration possible si ne depasse pas 10 fois le SMIG.
-b) Depot rapport d'activite au plus tard le 30 avril de chaque annee.
-
-DISTINCTIONS OBLIGATOIRES :
-1. LIVRES COMPTABLES OBLIGATOIRES selon SYCEBNL (exactement 4) :
-   - Le Journal
-   - Le Grand Livre
-   - La Balance generale des comptes
-   - Le Livre d'inventaire
-
-2. DOCUMENTS OBLIGATOIRES mais PAS des livres comptables :
-   - Le Registre des donateurs
-
-Que comporte le registre des donateurs?
-Le registre des donateurs comporte:
-- la date de l’opération ;
-- les nom et prénoms, le domicile et l’adresse mail des personnes physiques ;
-- la dénomination de la personne morale, 
-- le registre de commerce, 
-- le numéro d’identification fiscal, 
-- l’adresse du siège social et du mail ;
-- le montant du don/legs et le mode de libération (espèces, chèques, virement, nature). 
-Toutes les écritures contenues dans ce registre doivent être signées par le représentant légal de l’entité à but non lucratif.
-Ce registre peut être tenu en version physique reliée, brochée ou en version électronique. 
-
-3. Quelles sont les entités qui sont éligibles au système minimal de trésorerie (SMT)
-- Sont éligibles au Système minimal de trésorerie, les entités dont les ressources annuelles sont inférieures ou égales aux seuils suivants 30 millions de FCFA ou l'unité ayant cours légal dans l'Etat partie
-
-4. ETATS FINANCIERS OBLIGATOIRES SELON LE SYCEBNL :
-
-Il existe 3 types d'entites avec des etats financiers differents :
+ETATS FINANCIERS OBLIGATOIRES SELON LE SYCEBNL :
 
 === 1. ASSOCIATIONS ET ORDRES PROFESSIONNELS ===
-Deux systemes possibles :
-
 SYSTEME NORMAL (SN) — 4 etats financiers :
    - Bilan
    - Compte de resultat
@@ -357,8 +254,8 @@ SYSTEME MINIMAL DE TRESORERIE (SMT) — 3 etats financiers :
    ATTENTION : Le SMT n'a PAS de Tableau des flux de tresorerie
 
 === 2. PROJETS DE DEVELOPPEMENT ===
-UN SEUL systeme possible : le Systeme Normal (SN) uniquement.
-6 etats financiers obligatoires :
+UN SEUL systeme : le Systeme Normal (SN) uniquement.
+6 etats financiers :
    - Tableau emplois-ressources
    - Tableau d'execution budgetaire
    - Tableau de reconciliation de tresorerie
@@ -366,43 +263,47 @@ UN SEUL systeme possible : le Systeme Normal (SN) uniquement.
    - Compte d'exploitation
    - Notes annexes
 
-REGLE ABSOLUE PROJETS DE DEVELOPPEMENT :
-Le SMT N'EXISTE PAS pour les projets de developpement.
-Si on demande le SMT pour les projets de developpement, repondre :
-"Le Systeme Minimal de Tresorerie (SMT) n'existe pas pour les projets
-de developpement. Seul le Systeme Normal (SN) est applicable."
+REGLE ABSOLUE : Le SMT N'EXISTE PAS pour les projets de developpement.
 
-=== TABLEAU RECAPITULATIF ===
-| Entite                        | SN disponible | SMT disponible |
-| Associations et ordres prof.  | OUI           | OUI            |
-| Projets de developpement      | OUI           | NON            |
+ARTICLE FONDAMENTAL — CGI BENIN ARTICLE 4-9 :
+Les associations et organismes sans but lucratif legalement constitues et dont
+la gestion est desinteressee sont EXONERES de l'impot sur les societes.
+Conditions :
+a) Gere a titre benevole — remuneration possible si ne depasse pas 10 fois le SMIG.
+b) Depot rapport d'activite au plus tard le 30 avril de chaque annee.
 
-5. CONDITION DE NOMINATION D'UN AUDITEUR
-Selon l’article 19 de l’acte uniforme relatif au système comptable des entités à but non lucratif, sont tenues de désigner au moins un (1) auditeur, les entités à but non lucratif qui remplissent, à la clôture de l’exercice, l’un des trois critères suivants:
-        - total du bilan supérieur à cent millions (100.000.000) de francs CFA ou l’équivalent dans l'unité monétaire ayant cours légal dans l’Etat partie ;
-        - ressources annuelles supérieures à deux cents millions (200.000.000) de francs CFA ou l’équivalent dans l'unité monétaire ayant cours légal dans l’Etat partie ;
-        - effectif permanent supérieur à vingt (20) personnes ;
-L’entité n’est plus tenue de désigner un auditeur dès lors qu’elle ne remplit plus aucun des trois (3) critères fixés ci-dessus pendant les deux (2) exercices précédent l’expiration du mandat de l’auditeur.
-Pour les autres entités à but non lucratif ne remplissant pas ces critères, la nomination de l’auditeur est facultative. Elle peut toutefois être demandée en justice par au moins dix pour cent (10%) des membres.
+COMPTES DE REFERENCE OBLIGATOIRES :
+- Caisse : 5711 | Banque : 5211 | Virement de fonds : 585
+- Adherents / Fideles : 4111 | Dimes/quetes : 7044
+- Dons : 7041 | Cotisations : 701 | Legs : 7042
 
-6. QUI PEUT ETRE NOMME AUDITEUR?
-L’auditeur est choisi parmi les experts-comptables inscrits au tableau de l’ordre des experts-comptables ou de l’organe qui en tient lieu, et 
+ECRITURES TYPES VALIDEES :
 
-7. QUELLE EST LA DUREE DU MANDAT DE L'AUDITEUR?
-L'auditeur est nommé pour trois (3) exercices renouvelables une fois par l’assemblée générale ou l’instance qui en tient lieu de l’entité représentant plus de la moitié des membres présents ou représentés, ou par le bailleur de fonds et/ou l’Etat bénéficiaire du Projet de développement. 
-Toutefois, si l’entité à une existence inférieure à trois exercices, le mandat de l’auditeur est ramené à cette durée.
+E01 — Collecte dime/quete/offrande en especes :
+  Tresorerie : Debit 5711 / Credit 7044 — Libelle : S/Encaissement dimes
+  Engagement : Debit 4111/Credit 7044 puis Debit 5711/Credit 4111
 
+E02 — Versement especes en banque :
+  Debit 5211/Credit 585 (bordereau) puis Debit 585/Credit 5711 (avis credit)
 
+E03 — Don en especes :
+  Tresorerie : Debit 5711 / Credit 7041
+  Engagement : Debit 4111/Credit 7041 puis Debit 5711/Credit 4111
 
-REGLE DE RECHERCHE PAR ARTICLE :
-Quand l'utilisateur demande un article specifique du SYCEBNL ou de la loi,
-cherche dans le contexte le contenu de cet article.
-Si tu trouves le contenu de l'article dans le contexte, cite-le directement
-sans dire "Je n'ai pas pu extraire".
-Si tu ne trouves vraiment pas l'article, dis :
-"Je ne trouve pas cet article dans les documents disponibles."
-et donne les informations disponibles sur le sujet.
-Ne reponds JAMAIS uniquement "Je ne trouve pas" sans donner d'information utile.
+E04 — Don par virement :
+  Tresorerie : Debit 5211 / Credit 7041
+  Engagement : Debit 4111/Credit 7041 puis Debit 5211/Credit 4111
+
+E05 — Cotisation en especes :
+  Tresorerie : Debit 5711 / Credit 701
+  Engagement : Debit 4111/Credit 701 puis Debit 5711/Credit 4111
+
+DISTINCTIONS OBLIGATOIRES :
+1. LIVRES COMPTABLES OBLIGATOIRES (exactement 4) :
+   Journal | Grand Livre | Balance generale | Livre d'inventaire
+2. DOCUMENTS OBLIGATOIRES mais PAS livres comptables :
+   Registre des donateurs
+
 Contexte extrait des documents officiels :
 {context}
 
@@ -411,7 +312,7 @@ Historique de la conversation :
 
 Question actuelle : {question}
 
-Reponse concise et adaptee :"""
+Reponse concise, precise et bienveillante :"""
 
 
 def generer_reponse(llm, retriever, historique, question):
@@ -435,7 +336,6 @@ MAX_MESSAGES = 20
 HORS_SUJET = [
     "recette", "cuisine", "football", "sport", "politique",
     "meteo", "film", "musique", "amour", "jeu", "blague",
-    "python", "programmation", "code"
 ]
 
 
@@ -463,28 +363,34 @@ if questions_restantes <= 5:
 if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
     if st.session_state.nombre_questions >= MAX_MESSAGES:
         st.error("Limite de 20 questions atteinte. Cliquez sur 'Nouvelle conversation'.")
-    elif est_hors_sujet(question):
-        st.session_state.messages.append({"role": "user", "content": question})
-        with st.chat_message("user"):
-            st.markdown(question)
-        reponse_hs = "Je suis specialise uniquement dans le SYCEBNL, la loi sur les associations et la fiscalite au Benin."
-        with st.chat_message("assistant"):
-            st.markdown(reponse_hs)
-        st.session_state.messages.append({"role": "assistant", "content": reponse_hs})
+
     else:
         st.session_state.messages.append({"role": "user", "content": question})
         with st.chat_message("user"):
             st.markdown(question)
-        with st.chat_message("assistant"):
+
+        # Detecter sentiment
+        reponse_sentiment = detecter_sentiment(question)
+
+        if reponse_sentiment:
+            reponse = reponse_sentiment
+
+        elif est_hors_sujet(question):
+            reponse = "Je suis specialise uniquement dans le SYCEBNL, la loi sur les associations et la fiscalite au Benin. Je ne peux pas repondre a cette question."
+
+        else:
             with st.spinner("Recherche en cours..."):
                 reponse = generer_reponse(
                     llm, retriever,
                     st.session_state.messages,
                     question
                 )
+            st.session_state.nombre_questions += 1
+
+        with st.chat_message("assistant"):
             st.markdown(reponse)
+
         st.session_state.messages.append({"role": "assistant", "content": reponse})
-        st.session_state.nombre_questions += 1
 
 col1, col2, col3 = st.columns([4, 2, 4])
 with col2:
