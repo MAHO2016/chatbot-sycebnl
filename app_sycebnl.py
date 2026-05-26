@@ -168,7 +168,7 @@ if False:
             dossier_db, embeddings,
             allow_dangerous_deserialization=True
         )
-    else:
+else:
         documents = []
         for fichier in os.listdir(dossier_docs):
             if fichier.endswith('.pdf'):
