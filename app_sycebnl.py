@@ -142,6 +142,7 @@ FICHIERS_DRIVE = {
     "loi_sur_les_associations.pdf"    : "1ppwH7BHwiocHBTRN_hUGXiSbFVkcWo-i",
     "sycebnl.pdf"                     : "1O6le6GKQy4AG5fEef5JB9XJX-QX6l39Z",
     "cgi_2026.pdf"                    : "1uoBDsVF-4hftsywou6YEH60yf7Myst26",
+    "AU_SYCEBNL.pdf"                  : "1PjwvGKxN4QYA4ke8gZWRYDwSWAcpfI4J",
 }
 
 def telecharger_fichiers():
@@ -162,7 +163,7 @@ def charger_modele():
     dossier_db   = "faiss_index"
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
-    if os.path.exists(dossier_db):
+if os.path.exists(dossier_db) and os.path.exists("documents/AU_SYCEBNL.pdf"):
         vectorstore = FAISS.load_local(
             dossier_db, embeddings,
             allow_dangerous_deserialization=True
