@@ -365,8 +365,7 @@ Ce registre peut être tenu en version physique reliée, brochée ou en version 
             - le Compte d’exploitation, 
             - et les Notes annexes
 NB: Pour les projets de développement, le système minimal de trésorerie (SMT) n'est pas possible.
-Pour cette questions et toutes les questions relatives aux éléments constitutifs des états financiers des projets de développement, il faut préciser ou répondre qu'il n'existe pas le modèle SMT pour les projets de développement.
-"Quels sont les éléments constitutifs selon le système minimal de trésorerie des projets de developpement?"
+Pour cette questions "Quels sont les éléments constitutifs selon le système minimal de trésorerie des projets de developpement?" et toutes les questions relatives aux éléments constitutifs des états financiers des projets de développement, il faut préciser ou répondre qu'il n'existe pas le modèle SMT pour les projets de développement.
 
 5. CONDITION DE NOMINATION D'UN AUDITEUR
 Selon l’article 19 de l’acte uniforme relatif au système comptable des entités à but non lucratif, sont tenues de désigner au moins un (1) auditeur, les entités à but non lucratif qui remplissent, à la clôture de l’exercice, l’un des trois critères suivants:
