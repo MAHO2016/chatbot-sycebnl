@@ -375,20 +375,62 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
+# === LIMITE DE MESSAGES ===
+MAX_MESSAGES = 20
+
+if "nombre_questions" not in st.session_state:
+    st.session_state.nombre_questions = 0
+
+# Afficher compteur
+questions_restantes = MAX_MESSAGES - st.session_state.nombre_questions
+if questions_restantes <= 5:
+    st.warning(f"⚠️ Il vous reste {questions_restantes} question(s) dans cette session.")
+
+# Mots-cles hors sujet
+HORS_SUJET = [
+    "recette", "cuisine", "football", "sport", "politique",
+    "météo", "film", "musique", "amour", "jeu", "blague",
+    "python", "programmation", "code", "intelligence artificielle"
+]
+
+def est_hors_sujet(question):
+    question_lower = question.lower()
+    return any(mot in question_lower for mot in HORS_SUJET)
+
 if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
-    st.session_state.messages.append({"role": "user", "content": question})
-    with st.chat_message("user"):
-        st.markdown(question)
-    with st.chat_message("assistant"):
-        with st.spinner("Recherche en cours..."):
-            reponse = generer_reponse(
-                llm, retriever,
-                st.session_state.messages,
-                question
-            )
-        st.markdown(reponse)
-    st.session_state.messages.append(
-        {"role": "assistant", "content": reponse})
+
+    # Vérifier limite
+    if st.session_state.nombre_questions >= MAX_MESSAGES:
+        st.error("Vous avez atteint la limite de 20 questions par session. Cliquez sur 'Nouvelle conversation' pour recommencer.")
+
+    # Vérifier hors sujet
+    elif est_hors_sujet(question):
+        st.session_state.messages.append({"role": "user", "content": question})
+        with st.chat_message("user"):
+            st.markdown(question)
+        with st.chat_message("assistant"):
+            st.markdown("Je suis spécialisé uniquement dans le SYCEBNL, la loi sur les associations et la fiscalité au Bénin. Je ne peux pas répondre à cette question.")
+        st.session_state.messages.append({
+            "role": "assistant",
+            "content": "Je suis spécialisé uniquement dans le SYCEBNL, la loi sur les associations et la fiscalité au Bénin. Je ne peux pas répondre à cette question."
+        })
+
+    # Question valide
+    else:
+        st.session_state.messages.append({"role": "user", "content": question})
+        with st.chat_message("user"):
+            st.markdown(question)
+        with st.chat_message("assistant"):
+            with st.spinner("Recherche en cours..."):
+                reponse = generer_reponse(
+                    llm, retriever,
+                    st.session_state.messages,
+                    question
+                )
+            st.markdown(reponse)
+        st.session_state.messages.append(
+            {"role": "assistant", "content": reponse})
+        st.session_state.nombre_questions += 1
 
 # === BOUTON REINITIALISATION ===
 col1, col2, col3 = st.columns([4, 2, 4])
