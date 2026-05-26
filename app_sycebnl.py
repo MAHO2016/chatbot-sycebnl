@@ -278,183 +278,177 @@ b) Depot rapport d'activite au plus tard le 30 avril de chaque annee.
 
 ARTICLES OFFICIELS DE L'ACTE UNIFORME SYCEBNL — PRIORITE ABSOLUE :
 
-Article 1 : Il est institue un systeme comptable unique commun a tous les Etats parties
-denomme SYCEBNL. Toute entite a but non lucratif ayant son siege dans un Etat partie
-ou y exercant ses activites est soumise aux dispositions du present Acte uniforme.
+Article premier
+Il est institué un système comptable unique, commun à tous les États parties, dénommé Système comptable des entités à but non lucratif, en abrégé SYCEBNL, annexé au présent Acte uniforme.
+Toute entité à but non lucratif au sens de l'article 2 ci-dessous, qui a son siège dans l'un des États parties au Traité relatif à l'harmonisation du droit des affaires en Afrique ou qui exerce ses activités sur le territoire dudit État, est soumise aux dispositions du présent Acte uniforme.
 
-Article 2 : L'entite a but non lucratif est toute organisation poursuivant un but
-desinteresse dont les ressources servent au fonctionnement et a la realisation de son
-objet social. Constituent notamment des EBNL :
-1) les associations et les ordres professionnels
-2) les entites ayant pour objet la gestion ou l'administration de projets de
-developpement finances par les bailleurs bilatéraux, multilateraux, prives ou etatiques.
+Article 2
+L'entité à but non lucratif s'entend de toute organisation, poursuivant un but désintéresse, et dont les ressources éventuellement générées par l'activité servent au fonctionnement et à la réalisation de son objet social.
+Constituent, notamment, des entités à but non lucratif :
+1) les associations et les ordres professionnels :
+2) les entités ayant pour objet la gestion ou l'administration de projets de développement financés en général par les bailleurs bilatéraux, multilatéraux, privés ou étatiques.
+Les entités visées ci-dessus, lorsqu'elles ne sont pas soumises au système de la comptabilité publique, au système de comptabilité soumis à un régime particulier, ou à des dispositions nationales spécifiques, sont tenues de mettre en place une comptabilité, dite comptabilité financière, conformément aux règles applicables au Système comptable des entités à but non lucratif et prévues par les dispositions ci-après.
 
-Article 3 : Les dispositions de l'Acte uniforme relatif au droit comptable et a
-l'information financiere sont applicables aux EBNL, a l'exception des articles
-5, X, 10a, 13, 17 alineas 7 et 8, 18, 19 quatrieme tiret, 21, 25 a 34, 49, 60, 70,
-71, 73 a 113.
+Article 3
+Les dispositions de l'Acte uniforme relatif au droit comptable et à l'information financière sont applicables aux entités visées à l'article 2 ci-dessus, à exception des articles 5. X. 10a 13.17 alinéas 7 et 8, 18. 19 quatrième tiret, 21. 25 à 34, 49, 60. 70, 71. 73 à 113.
+Chapitre 2 - États financiers annuels
 
-Article 4 : Un jeu complet d'etats financiers annuels comprend :
-Pour les associations et ordres professionnels :
-- le Bilan
-- le Compte de resultat
-- le Tableau des flux de tresorerie
-- les Notes annexes
-Pour les projets de developpement :
-- le Tableau emplois-ressources
-- le Tableau d'execution budgetaire
-- le Tableau de reconciliation de tresorerie
-- le Bilan
-- le Compte d'exploitation
-- les Notes annexes
+Article 4
+Un jeu complet d'états financiers annuels comprend :
+•	pour les associations et les ordres professionnels. 
+        o	le Bilan. 
+        o	le Compte de résultat. 
+        o	Le Tableau des flux de trésorerie 
+        o	ainsi que les Notes annexes
+•	pour les projets de développement :
+        o	le Tableau emplois-ressources,
+        o	le Tableau d'exécution budgétaire
+        o	le Tableau de réconciliation de trésorerie. 
+        o	le Bilan. 
+        o	le Compte d'exploitation, 
+        o	et les Notes annexes.
+Les états financiers forment un tout indissociable et décrivent de façon régulière et sincère les événements, opérations et situations de l'exercice pour donner une image fidèle du patrimoine et de la situation financière de l'entité.
+Les états financiers sont établis et présentés conformément aux modèles du Système comptable des entités à but non lucratif.
+Toute entité qui applique correctement le Système comptable des entités à but non lucratif est réputée donner, dans ses états financiers. Une image fidèle de sa situation et de ses opérations.
+Lorsque l'application d'une prescription comptable se révèle insuffisante ou inadaptée pour donner l'image fidèle, des informations complémentaires ou des justifications nécessaires sont obligatoirement fournies dans les Notes annexes.
 
-Article 5 : Les presentations admises sont le Systeme normal et le Systeme minimal
-de tresorerie (SMT). Toute entite est soumise au Systeme normal sauf exception liee
-a sa taille. Le regime juridique du depot des etats financiers est soumis a la
-legislation interne de chaque Etat partie.
+Article 5
+Les états financiers annuels visés à l'article 4 sont rendus obligatoires, en tout ou en partie, en fonction de la taille des entités appréciée selon des critères mentionnés à l'article 6 ci-après.
+Les présentations des états financiers annuels et la tenue des comptes admises sont le Système normal et le Système minimal de trésorerie. Selon le cas. Toute entité est, sauf exception lice à sa taille. Soumise au Système normal de présentation des états financiers et de tenue des comptes.
+Le régime juridique du dépôt des états financiers est soumis à la législation interne de chaque État partie.
 
-Article 6 : Les petites entites sont assujetties au SMT si leurs ressources annuelles
-sont inferieures ou egales a 30 000 000 FCFA pour chaque categorie :
-1) subventions : 30 000 000 FCFA
-2) cotisations et autres revenus : 30 000 000 FCFA
-3) dons et/ou legs : 30 000 000 FCFA
-4) ressources du projet de developpement : 30 000 000 FCFA
-5) autres ressources : 30 000 000 FCFA
-Si l'une des ressources depasse ce seuil ou si de maniere cumulee sur deux exercices
-les ressources depassent 30 000 000 FCFA, l'entite est eligible au Systeme normal.
+Article 6
+Les petites entités sont assujetties, sauf option, au Système minimal de trésorerie en abroge SMT.
+Sont éligibles au Système minimal de trésorerie, les entités dont les ressources annuelles son inférieures ou égales aux seuils suivant.
+1) subventions : trente millions (30.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'État partie :
+2) cotisations et autres revenus : trente millions (30.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'Etat partie :
+3) dons et/ou legs : trente millions (30.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'État partie :
+4) ressources du projet de développement : trente millions (30.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'Etat partie :
+5) autres ressources : trente millions (30.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'Etat partie.
+Si l'une des ressources citées ci-dessus est supérieure aux seuils susmentionnés ou si, de manière cumulée sur deux exercices, les ressources dépassent trente millions (30.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'Etat partie. L’entité est éligible au Système normal.
 
-Article 7 : Le Bilan decrit separement actif et passif et fait apparaitre les fonds
-propres. Le Compte de resultat recapitule produits et charges faisant apparaitre
-l'excedent net ou le deficit net. Le Compte d'exploitation des projets recapitule
-les charges sans amortissement et une quotite des ressources pour un solde nul.
-Le Tableau des flux de tresorerie retrace les mouvements entrees/sorties de liquidites.
-Le Tableau emplois-ressources recapitule emplois, immobilisations et charges ainsi que
-les fonds recus des bailleurs. Le Tableau d'execution budgetaire montre le budget et
-les realisations. Le Tableau de reconciliation retrace les mouvements de tresorerie.
-Les Notes annexes completent et precisent l'information des autres etats financiers.
+Article 7
+Le Bilan décrit séparément les éléments d'actif et les éléments de passif constituant le patrimoine de l'entité. Il fait apparaître de façon distincte les fonds propres de l'entité.
+Le Compte de résultat des associations et ordres professionnels récapitule en liste, les produits et les charges qui font apparaître l'excédent net ou le déficit net de l'exercice. Il doit être procédé, dans l'exercice à tous amortissements, dépréciations et provisions nécessaires pour tenir compte des consommations d'avantages économiques, des pertes de valeurs, des risques et des charges probables, même en cas d'absence ou d'insuffisance d'excédent.
+Il doit être tenu compte des risques, charges et produits intervenus au cours de l'exercice ou d'un exercice antérieur, même s'ils sont connus seulement entre la date de clôture de l'exercice et celle de l'arrêté des comptes.
+Le Compte d'exploitation des projets de développement et entités assimilées récapitule en liste, les charges sans amortissement, ni dépréciation et une quotité des ressources équivalant aux charges pour que le solde des opérations de l'exercice soit nul.
+Le Tableau des flux de trésorerie retrace les mouvements « entrées » et « sorties » de liquidités de l'exercice.
+Le Tableau emplois-ressources récapitule tous les emplois, immobilisations et charges, sans amortissement ni dépréciation ainsi que les fonds reçus des bailleurs :
+Le Tableau d'exécution budgétaire, fait apparaître le budget de l'exercice et les réalisations de l'exercice :
+Le Tableau de réconciliation de trésorerie retrace les mouvements de trésorerie du début à la fin de l'exercice :
+Les Notes annexes complètent et précisent l'information donnée par les autres états financiers annuels.
 
-Article 8 : Le Bilan fait apparaitre :
-A l'actif : actif immobilise, actif circulant, tresorerie-actif, ecart de conversion-actif.
-Au passif : ressources stables, passif circulant, tresorerie-passif, ecart de conversion-passif.
+Article 8
+Le Bilan de l'exercice fait apparaître de façon distincte :
+1) à l’actif : l'actif immobilisé, l'actif circulant, la trésorerie-actif et l'écart de conversion-actif ;
+2) au passif : les ressources stables, le passif circulant, la trésorerie-passif et l'écart de conversion-passif.
 
-Article 9 : Le Compte de resultat fait apparaitre au credit les produits et au debit
-les charges selon leur nature. Pour les projets, le Compte d'exploitation fait apparaitre
-au debit les charges sans amortissement et au credit une quotite des ressources pour
-un solde nul.
+Article 9
+Le Compte de résultat de l'exercice fait apparaître au crédit les produits et, au débit, les charges distinguées selon leur nature.
+Pour les projets de développement, le Compte d'exploitation fait apparaître au débit les charges sans amortissement ni dépréciation et, au crédit, une quotité des ressources équivalant au total des charges pour obtenir un solde de l'exercice nul. 
 
-Article 10 : Le Tableau des flux de tresorerie fait apparaitre : la tresorerie nette
-en debut d'exercice, les flux des activites operationnelles, les flux des operations
-d'investissement, les flux des fonds propres, les flux des fonds exterieurs et la
-tresorerie nette en fin d'exercice.
+Article 10
+Le Tableau des flux de trésorerie de l'exercice fait apparaitre la trésorerie nette en début d'exercice, les flux de trésorerie provenant des activités opérationnelles, les flux de trésorerie provenant des opérations d'investissement, les flux de trésorerie provenant des fonds propres.
+Les flux de trésorerie provenant des fonds extérieurs et la trésorerie nette en fin d'exercice.
 
-Article 11 : Le Tableau emplois-ressources fait apparaitre les emplois (immobilisations
-et charges) sans amortissement ni depreciation, les fonds recus, l'excedent ou le
-deficit des fonds recus sur les emplois, le montant de l'encaisse disponible.
+Article 11
+Le Tableau emplois-ressources, fait apparaitre les emplois (immobilisations et charges) sans amortissement ni dépréciation, les fonds reçus, l'excédent ou le déficit des fonds reçus sur les emplois, le montant de l'encaisse disponible.
 
-Article 12 : Le Tableau d'execution budgetaire fait apparaitre le budget de l'exercice,
-les decaissements, les engagements non encore payes, les realisations, le credit
-disponible du budget et l'execution du budget en valeur relative.
+Article 12
+Le Tableau d'exécution budgétaire fait apparaître le budget de l'exercice, les décaissements. Les engagements non encore payés, les réalisations, le crédit disponible du budget et l'exécution du budget en valeur relative.
+Article 13
+Le Tableau de réconciliation de trésorerie retrace la trésorerie de début d'exercice, les transferts de fonds reçus des bailleurs, les emplois de l'exercice, la trésorerie de fin d'exercice et les paiements en instance.
 
-Article 13 : Le Tableau de reconciliation de tresorerie retrace la tresorerie de debut
-d'exercice, les transferts de fonds recus des bailleurs, les emplois de l'exercice,
-la tresorerie de fin d'exercice et les paiements en instance.
+Article 14
+Le livre d'inventaire est un document obligatoire sur lequel sont transcrits :
+1) pour les associations et les ordres professionnels, le Bilan, le Compte de résultat et le Tableau des flux de trésorerie de chaque exercice ainsi que le résumé de l'opération d'inventaire ;
+2) pour les entités ayant pour objet la gestion ou l'administration de projets de développement, le Tableau emplois-ressources, le Tableau d'exécution budgétaire, le Tableau de réconciliation de trésorerie, le Bilan, le Compte d'exploitation de chaque exercice ainsi que le résumé de l'opération d'inventaire.
 
-Article 14 : Le livre d'inventaire est un document obligatoire sur lequel sont transcrits :
-1) Pour les associations et ordres professionnels : le Bilan, le Compte de resultat
-et le Tableau des flux de tresorerie de chaque exercice ainsi que le resume de
-l'operation d'inventaire.
-2) Pour les projets de developpement : le Tableau emplois-ressources, le Tableau
-d'execution budgetaire, le Tableau de reconciliation de tresorerie, le Bilan, le
-Compte d'exploitation de chaque exercice ainsi que le resume de l'operation d'inventaire.
+Article 15
+Les états financiers annuels, décrits aux articles 7 à 13, sont accompagnés de Notes annexes, organisées par une référence croisée avec l'information liée. 
+Les Notes annexes contiennent des informations complémentaires à celles qui sont présentées dans le Bilan, le Compte de résultat, le Compte d'exploitation, le Tableau des flux de trésorerie, le Tableau emplois-ressources, le Tableau d'exécution budgétaire, le Tableau de réconciliation de trésorerie. Les Notes annexes fournissent des descriptions narratives ou des décompositions d'éléments présentés dans les autres états financiers, ainsi que des informations relatives au% éléments qui ne répondent pas aux critères de comptabilisation dans les autres états financiers, Les Notes annexes comportent tous les éléments à caractère significatif qui ne sont pas mis en évidence dans les autres états financiers et sont susceptibles d'influencer le jugement que les utilisateurs des documents peuvent porter sur le patrimoine, la situation financière et la performance de l’entité, il en est ainsi notamment pour le montant des engagements donnés ct reçus dont le suivi doit être assuré par l'entité dans le cadre de son organisation comptable
+Toute modification dans la présentation des états financiers annuels ou dans les méthodes d'évaluation doit être signalée dans les Notes annexes
 
-Article 15 : Les etats financiers annuels sont accompagnes de Notes annexes organisees
-par reference croisee. Les Notes annexes contiennent des informations complementaires,
-des descriptions narratives ou decompositions d'elements presentes dans les autres
-etats financiers, ainsi que des informations relatives aux elements ne repondant pas
-aux criteres de comptabilisation. Toute modification dans la presentation ou les
-methodes d'evaluation doit etre signalee dans les Notes annexes.
+Article 16
+Les états financiers annuels de chaque entité respectent les dispositions ci-dessous :
+1) le recours, pour la tenue de la comptabilité de l'entité, à un plan de comptes normalisé dont la liste figure dans le Système comptable des entités à but non lucratif ;
+2) la tenue obligatoire de livres ou autres supports autorises ainsi que la mise en place de procédures nécessaires à organisation comptable permettant un contrôle interne une fiable et le contrôle externe par l'intermédiaire, Ie cas échéant, de l'auditeur, de la réalité des opérations ainsi que de la qualité des comptes, tout en favorisant la collecte des informations ;
+3) A la clôture de chaque exercice, les organes d'administration ou de direction, selon le cas, dressent I ‘inventaire et les états financiers conformément aux dispositions de l`Acte uniforme et établissent un rapport d'activité ; le rapport d'activité expose la situation de l'entité durant l'exercice écoulé, ses perspectives de développement ou son évolution prévisible et l'évolution de la situation de trésorerie ; les événements importants. survenus entre la date de clôture de l'exercice et la date à laquelle il est établi, doivent également y être mentionnés ;
+4) le Bilan d'ouverture d'un exercice doit correspondre au Bilan de clôture de l'exercice précédent ;
+5) toute compensation, non juridiquement fondée, entre postes d'actif et postes de passif dans le Bilan et entre postes de charges et postes de produits dans le Compte de résultat est interdite :
+6) la présentation des états financiers est identique d'un exercice à l'autre :
+7) chacun des postes des états financiers comporte l'indication du chiffre relatif au poste correspondant de l'exercice précédent.
+Lorsque l'un des postes chiffrés d'un état financier n'est pas comparable à celui de l'exercice précédent, c'est ce dernier qui doit être adapté. L'absence de comparabilité ou l'adaptation des chiffres est signalée dans les Notes annexes.
+Pour la première année d'application, l'entité n'a l'obligation de renseigner que la colonne
+N-l du Bilan.
 
-Article 16 : Les etats financiers annuels respectent :
-1) le recours a un plan de comptes normalise SYCEBNL
-2) la tenue obligatoire de livres comptables et mise en place de procedures de
-controle interne
-3) a la cloture, etablissement de l'inventaire, des etats financiers et d'un rapport
-d'activite exposant la situation, les perspectives et l'evolution de la tresorerie
-4) le Bilan d'ouverture doit correspondre au Bilan de cloture de l'exercice precedent
-5) toute compensation non juridiquement fondee entre actif/passif ou charges/produits
-est interdite
-6) la presentation des etats financiers est identique d'un exercice a l'autre
-7) chaque poste comporte le chiffre de l'exercice precedent.
+Chapitre 3 - Moyens de contrôle
+Article 17
+Il est établi pour chaque entité à but non lucratif un registre des donateurs pour tous les dons, donations et legs reçus par l'entité.
+Le registre des donateurs est coté, paraphé et numéroté de façon continue par la juridiction compétente de chaque État partie concerné.
+Le registre des donateurs contient :
+1) la date de l'opération :
+2) les nom et prénoms, le domicile et l'adresse électronique des personnes physiques donatrices ;
+3) la dénomination, le numéro d'immatriculation, le numéro d'identification fiscale, l'adresse du siège social et l'adresse électronique des personnes morales donatrices :
+4) le montant et le mode de libération du don/legs mis à la disposition de l'entité à but non lucratif en espèces, par chèque, par virement ou en nature.
+Toutes les écritures contenues dans ce registre doivent être signées par le représentant légal de l'entité à but non lucratif.
+Ce registre peut être tenu en version physique reliée, brochée ou en version électronique.
 
-Article 17 : Il est etabli pour chaque EBNL un registre des donateurs pour tous les
-dons, donations et legs recus. Ce registre est cote, paraphe et numerote par la
-juridiction competente. Il contient :
-1) la date de l'operation
-2) les nom, prenoms, domicile et adresse electronique des personnes physiques donatrices
-3) la denomination, numero d'immatriculation, numero d'identification fiscale, adresse
-du siege et adresse electronique des personnes morales donatrices
-4) le montant et le mode de liberation du don/legs (especes, cheque, virement ou nature).
-Toutes les ecritures doivent etre signees par le representant legal de l'EBNL.
-Ce registre peut etre tenu en version physique ou electronique.
+Article 18
+L'entité tient à jour le registre des donateurs.
+S'il existe un auditeur, ce dernier soumet, à l'assemblée générale ou l'instance qui en tient lieu aux membres ou au bailleur de fonds du projet, un rapport qui constate l'existence du registre des donateurs et donne son avis sur sa tenue conforme.
+S'il n'existe pas d'auditeur, une déclaration des dirigeants attestant de la tenue conforme du registre des donateurs est annexée audit rapport ou soumise à l'assemblée générale ou l'instance qui en tient lieu.
 
-Article 18 : L'entite tient a jour le registre des donateurs. S'il existe un auditeur,
-il soumet un rapport constatant l'existence du registre et donnant son avis sur sa tenue.
-S'il n'existe pas d'auditeur, une declaration des dirigeants attestant la tenue conforme
-est annexee au rapport ou soumise a l'assemblee generale.
+Article 19
+Toute entité à but non lucratif est tenue de désigner au moins un auditeur lorsqu'elle remplit, à la clôture de l'exercice, l'un des trois critères suivants :
+1) un total du bilan supérieur à cent millions (100.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'Etat partie :
+2) des ressources annuelles supérieures à deux cent millions (200.000.000) de francs CFA ou l'équivalent dans l'unité monétaire ayant cours légal dans l'État partie :
+3) un effectif permanent supérieur à vingt (20) personnes ;
+L'entité n'est plus tenue de désigner un auditeur dès lors qu'elle ne remplit plus aucun des trois
+(3) critères fixés ci-dessus pendant les deux (2) exercices qui précédent l'expiration du mandat de l'auditeur.
+Pour les autres entités à but non lucratif ne remplissant pas ces critères, la nomination de l'auditeur est facultative. Elle peut toutefois être demandée en justice par au moins dix-pour-cent (10%) des membres de l'entité.
+Les états financiers et le rapport de gestion annuels sont transmis à l'auditeur s'il en a été désigné, quarante-cinq (45) jours au moins avant la date de l'assemblée générale ordinaire ou de l'instance qui en tient lieu de l'association et l'ordre professionnel, ou la date de transmission du rapport de l'auditeur aux bailleurs de fonds et/ou à l'Etat bénéficiaire du Projet de développement.
+Dans les entités qui désignent, volontairement ou obligatoirement, un auditeur, ce dernier 1) soit, émet une opinion indiquant que les états financiers sont réguliers et sincères el donnent une image fidèle du résultat des opérations de l'exercice écoulé ainsi que de la situation financière et du patrimoine à la fin de cet exercice :
+2) soit, exprime, en la motivant, une opinion avec réserve ou défavorable, ou indique qu'il est dans l'impossibilité d'exprimer une opinion.
+L'auditeur se prononce sur la sincérité et la concordance des informations données dans le rapport d'activité avec les états financiers.
 
-Article 19 : Toute EBNL doit designer au moins un auditeur si elle remplit l'un
-des criteres suivants a la cloture de l'exercice :
-1) total du bilan superieur a 100 000 000 FCFA
-2) ressources annuelles superieures a 200 000 000 FCFA
-3) effectif permanent superieur a 20 personnes.
-L'entite n'est plus tenue de designer un auditeur si elle ne remplit plus aucun de
-ces criteres pendant les 2 exercices precedant l'expiration du mandat.
-Pour les autres EBNL ne remplissant pas ces criteres, la nomination est facultative
-mais peut etre demandee en justice par au moins 10% des membres.
-Les etats financiers sont transmis a l'auditeur 45 jours au moins avant l'assemblee
-generale ordinaire.
+Article 20
+L'auditeur est choisi par les membres de l'entité à but non lucratif parmi les experts-comptables inscrits au tableau de l'ordre des experts-comptables ou de l'organe qui en tient lieu dans chaque
+Etat partie.
 
-Article 20 : L'auditeur est choisi parmi les experts-comptables inscrits au tableau
-de l'ordre des experts-comptables ou de l'organe qui en tient lieu dans chaque Etat partie.
+Article 21
+L'auditeur est nommé pour trois (3) exercices renouvelables une fois. Toutefois, si l'entité a une existence inférieure à trois exercices, son mandat est ramené à cette durée.
+L'auditeur est nommé par l'assemblée générale de l'entité ou l'instance qui en tient lieu à la majorité de ses membres représentant au moins plus de la moitié des membres présents ou représentés, ou par le bailleur de fonds ct/ou l'État partie bénéficiaire du Projet de développement.
+Si la majorité ci-dessus n'est pas obtenu et sauf clause contraire des statuts, l'assemblée générale de l'entité ou l'instance qui en tient lieu réunie sur deuxième convocation peut valablement désigner l'auditeur lorsque le quorum d'un dixième (1/10) des membres présents ou représentés est atteint.
+Si le quorum ci-dessus n'est pas atteint sur deuxième convocation ou lorsque l'assemblée générale de l'entité ou l'instance qui en tient lieu ne procède pas à la nomination d'un auditeur, tout membre peut demander à la juridiction compétente la désignation d'un auditeur.
 
-Article 21 : L'auditeur est nomme pour 3 exercices renouvelables une fois. Si l'entite
-a une existence inferieure a 3 exercices, son mandat est ramene a cette duree.
-L'auditeur est nomme par l'assemblee generale a la majorite des membres representant
-plus de la moitie des membres presents ou representes.
-Si le quorum n'est pas atteint sur deuxieme convocation, tout membre peut demander
-a la juridiction competente la designation d'un auditeur.
+Article 22
+Si l'assemblée ou l'instance qui en tient lieu ne procède pas au renouvellement du mandat de l'auditeur ou à son remplacement à l'expiration de son mandat, la mission de l'auditeur est prorogée, sauf refus exprès de sa part. 
+La prorogation de la mission de l'auditeur prévue à l'alinéa 1° du présent article s'opère jusqu'à la plus prochaine assemblée générale ou à la prochaine réunion de l'instance qui en tient lieu statuant sur les comptes de l'entité, ou à la prochaine approbation des comptes du projet par le bailleur de fonds ou l'État partie.
 
-Article 22 : Si l'assemblee ne procede pas au renouvellement du mandat de l'auditeur
-a son expiration, la mission est prorogee sauf refus expres de sa part, jusqu'a la
-prochaine assemblee generale statuant sur les comptes.
+Article 23
+Il est procédé régulièrement, par voie de Décision du Conseil des ministres de l'OHADA, à la mise à jour du Système comptable des entités à but non lucratif, sur recommandation de la Commission de normalisation pour la profession comptable conformément au Règlement portant création, organisation et fonctionnement de ladite Commission.
 
-Article 23 : Il est procede regulierement par voie de Decision du Conseil des ministres
-de l'OHADA a la mise a jour du SYCEBNL, sur recommandation de la Commission de
-normalisation pour la profession comptable.
+Chapitre 4 - Dispositions pénales
+Article 24
+Encourent une sanction pénale les dirigeants des entités à but non lucratif qui :
+• n'ont pas, pour un exercice, dressé l'inventaire et établi les états financiers annuels, ainsi que le rapport d'activité :
+• ont sciemment établi et communiqué des états financiers qui ne donnent pas une image fidèle du patrimoine, de la situation financière et du résultat de l'exercice ;
+• n'ont pas tenu et mis à jour le registre des donateurs.
 
-Article 24 : Encourent une sanction penale les dirigeants des EBNL qui :
-- n'ont pas dresse l'inventaire et etabli les etats financiers annuels ainsi que
-le rapport d'activite
-- ont sciemment etabli des etats financiers ne donnant pas une image fidele
-- n'ont pas tenu et mis a jour le registre des donateurs.
+Article 25
+Encourent une sanction pénale, les dirigea ts d'entités à but non lucratif qui n'ont pas provoqué la désignation de l'auditeur de l'entité ou ne l'ont pas convoqué à l'assemblée générale ou à la réunion de l'instance qui en tient lieu statuant sur les comptes de l'entité.
 
-Article 25 : Encourent une sanction penale les dirigeants qui n'ont pas provoque
-la designation de l'auditeur ou ne l'ont pas convoque a l'assemblee generale statuant
-sur les comptes.
+Article 26
+Encourent une sanction pénale, les dirigeants d'entités à but non lucratif ou toute personne au service de l'entité qui, sciemment, ont fait obstacle aux vérifications ou au contrôle de l'auditeur, ou qui ont refusé la communication sur place de toutes les pièces utiles à l'exercice de sa mission, notamment les contrats, livres, documents comptables et registres.
 
-Article 26 : Encourent une sanction penale les dirigeants ou toute personne au service
-de l'entite qui ont fait obstacle aux verifications de l'auditeur ou refuse la
-communication des pieces utiles a sa mission (contrats, livres, documents comptables,
-registres).
+Article 27
+Les infractions prévues par le présent Acte uniforme sont punies conformément aux dispositions du droit pénal en vigueur dans chaque État partie. 
 
-Article 27 : Les infractions prevues par le present Acte uniforme sont punies
-conformement aux dispositions du droit penal en vigueur dans chaque Etat partie.
+Article 28
+Le présent Acte uniforme, auquel est annexé le système comptable des entités à but non lucratif, sera publié au Journal Officiel de l'OHADA dans un délai de soixante (60) jours à compter de la date de son adoption. Il sera également publié dans les États parties au Journal Officiel ou par tout autre moyen approprié.
+Le présent Acte uniforme est applicable à compter du 1er janvier 2024.
 
-Article 28 : Le present Acte uniforme, auquel est annexe le systeme comptable des
-entites a but non lucratif, sera publie au Journal Officiel de l'OHADA dans un delai
-de soixante (60) jours a compter de la date de son adoption. Il sera egalement publie
-dans les Etats parties au Journal Officiel ou par tout autre moyen approprie.
-Le present Acte uniforme est applicable a compter du 1er janvier 2024.
 
 
 COMPTES DE REFERENCE OBLIGATOIRES :
