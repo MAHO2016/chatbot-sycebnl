@@ -330,6 +330,51 @@ DISTINCTIONS OBLIGATOIRES :
 2. DOCUMENTS OBLIGATOIRES mais PAS des livres comptables :
    - Le Registre des donateurs
 
+Que comporte le registre des donateurs?
+Le registre des donateurs comporte:
+- la date de l’opération ;
+- les nom et prénoms, le domicile et l’adresse mail des personnes physiques ;
+- la dénomination de la personne morale, 
+- le registre de commerce, 
+- le numéro d’identification fiscal, 
+- l’adresse du siège social et du mail ;
+- le montant du don/legs et le mode de libération (espèces, chèques, virement, nature). 
+Toutes les écritures contenues dans ce registre doivent être signées par le représentant légal de l’entité à but non lucratif.
+Ce registre peut être tenu en version physique reliée, brochée ou en version électronique. 
+
+3. Quelles sont les entités qui sont éligibles au système minimal de trésorerie (SMT)
+- Sont éligibles au Système minimal de trésorerie, les entités dont les ressources annuelles sont inférieures ou égales aux seuils suivants 30 millions de FCFA ou l'unité ayant cours légal dans l'Etat partie
+
+4. LES ELEMENTS CONSTITUTIFS DES ETATS FINANCIERS
+- Pour les associations et ordres professionnels: il y a deux systèmes, le système normal et le système mininal de trésorerie.
+    - Système normal
+            - Bilan
+            - Compte de résultat
+            - Tableau des flux de trésorerie;
+            - Notes annexes
+    - Système minimal de trésorerie
+            - Bilan
+            - Compte de résultat
+            - Notes annexes
+
+- Pour les projets de développement
+            - le Tableau emplois-ressources, 
+            - le Tableau d’exécution budgétaire, 
+            - le Tableau de réconciliation de trésorerie, 
+            - le Bilan, 
+            - le Compte d’exploitation, 
+            - et les Notes annexes
+NB: Pour les projets de développement, le système minimal de trésorerie (SMT) n'est pas possible.
+
+5. CONDITION DE NOMINATION D'UN AUDITEUR
+Selon l’article 19 de l’acte uniforme relatif au système comptable des entités à but non lucratif, sont tenues de désigner au moins un (1) auditeur, les entités à but non lucratif qui remplissent, à la clôture de l’exercice, l’un des trois critères suivants:
+        - total du bilan supérieur à cent millions (100.000.000) de francs CFA ou l’équivalent dans l'unité monétaire ayant cours légal dans l’Etat partie ;
+        - ressources annuelles supérieures à deux cents millions (200.000.000) de francs CFA ou l’équivalent dans l'unité monétaire ayant cours légal dans l’Etat partie ;
+        - effectif permanent supérieur à vingt (20) personnes ;
+L’entité n’est plus tenue de désigner un auditeur dès lors qu’elle ne remplit plus aucun des trois (3) critères fixés ci-dessus pendant les deux (2) exercices précédent l’expiration du mandat de l’auditeur.
+Pour les autres entités à but non lucratif ne remplissant pas ces critères, la nomination de l’auditeur est facultative. Elle peut toutefois être demandée en justice par au moins dix pour cent (10%) des membres.
+
+
 REGLE DE RECHERCHE PAR ARTICLE :
 Quand l'utilisateur demande un article specifique du SYCEBNL ou de la loi,
 cherche dans le contexte le contenu de cet article.
