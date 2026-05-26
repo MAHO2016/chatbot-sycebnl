@@ -345,36 +345,45 @@ Ce registre peut être tenu en version physique reliée, brochée ou en version 
 3. Quelles sont les entités qui sont éligibles au système minimal de trésorerie (SMT)
 - Sont éligibles au Système minimal de trésorerie, les entités dont les ressources annuelles sont inférieures ou égales aux seuils suivants 30 millions de FCFA ou l'unité ayant cours légal dans l'Etat partie
 
-4. LES ELEMENTS CONSTITUTIFS DES ETATS FINANCIERS
-- Pour les associations et ordres professionnels: il y a deux systèmes, le système normal et le système mininal de trésorerie.
-    - Système normal (SN) pour les associtions et ordre professionnel
-            - Bilan
-            - Compte de résultat
-            - Tableau des flux de trésorerie;
-            - Notes annexes
-    - Système minimal de trésorerie (SMT) pour les associations et ordre professionnel
-            - Bilan
-            - Compte de résultat
-            - Notes annexes
+4. ETATS FINANCIERS OBLIGATOIRES SELON LE SYCEBNL :
 
-- Pour les projets de développement
-            - le Tableau emplois-ressources, 
-            - le Tableau d’exécution budgétaire, 
-            - le Tableau de réconciliation de trésorerie, 
-            - le Bilan, 
-            - le Compte d’exploitation, 
-            - et les Notes annexes
-NB: Pour les projets de développement, le système minimal de trésorerie (SMT) n'est pas possible.
-Pour cette question "Quels sont les éléments constitutifs selon le système minimal de trésorerie des projets de developpement?" et toutes les questions relatives aux éléments constitutifs des états financiers des projets de développement, il faut préciser ou répondre qu'il n'existe pas le modèle SMT pour les projets de développement.
-NE REPOND PLUS A CETTE QUESTION "Quels sont les éléments constitutifs selon le système minimal de trésorerie des projets de developpement?" mais répond plutot "qu'il n'existe pas le modèle SMT pour les projets de développement."
-QUAND ON TE DEMANDE LES ETATS FINANCIERS DES PROJETS DE DEVELOPPEMENT, il faut citer sans conditions:            
-            "- le Tableau emplois-ressources, 
-            - le Tableau d’exécution budgétaire, 
-            - le Tableau de réconciliation de trésorerie, 
-            - le Bilan, 
-            - le Compte d’exploitation, 
-            - et les Notes annexes"
-C'est lorsque la personne va te demander pour le système minimal de trésorerie (SMT), qu'il faut dire qu'il n'existe pas de SMT pour les projets de développement.
+Il existe 3 types d'entites avec des etats financiers differents :
+
+=== 1. ASSOCIATIONS ET ORDRES PROFESSIONNELS ===
+Deux systemes possibles :
+
+SYSTEME NORMAL (SN) — 4 etats financiers :
+   - Bilan
+   - Compte de resultat
+   - Tableau des flux de tresorerie
+   - Notes annexes
+
+SYSTEME MINIMAL DE TRESORERIE (SMT) — 3 etats financiers :
+   - Bilan
+   - Compte de resultat
+   - Notes annexes
+   ATTENTION : Le SMT n'a PAS de Tableau des flux de tresorerie
+
+=== 2. PROJETS DE DEVELOPPEMENT ===
+UN SEUL systeme possible : le Systeme Normal (SN) uniquement.
+6 etats financiers obligatoires :
+   - Tableau emplois-ressources
+   - Tableau d'execution budgetaire
+   - Tableau de reconciliation de tresorerie
+   - Bilan
+   - Compte d'exploitation
+   - Notes annexes
+
+REGLE ABSOLUE PROJETS DE DEVELOPPEMENT :
+Le SMT N'EXISTE PAS pour les projets de developpement.
+Si on demande le SMT pour les projets de developpement, repondre :
+"Le Systeme Minimal de Tresorerie (SMT) n'existe pas pour les projets
+de developpement. Seul le Systeme Normal (SN) est applicable."
+
+=== TABLEAU RECAPITULATIF ===
+| Entite                        | SN disponible | SMT disponible |
+| Associations et ordres prof.  | OUI           | OUI            |
+| Projets de developpement      | OUI           | NON            |
 
 5. CONDITION DE NOMINATION D'UN AUDITEUR
 Selon l’article 19 de l’acte uniforme relatif au système comptable des entités à but non lucratif, sont tenues de désigner au moins un (1) auditeur, les entités à but non lucratif qui remplissent, à la clôture de l’exercice, l’un des trois critères suivants:
