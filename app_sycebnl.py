@@ -347,12 +347,12 @@ Ce registre peut être tenu en version physique reliée, brochée ou en version 
 
 4. LES ELEMENTS CONSTITUTIFS DES ETATS FINANCIERS
 - Pour les associations et ordres professionnels: il y a deux systèmes, le système normal et le système mininal de trésorerie.
-    - Système normal
+    - Système normal (SN) pour les associtions et ordre professionnel
             - Bilan
             - Compte de résultat
             - Tableau des flux de trésorerie;
             - Notes annexes
-    - Système minimal de trésorerie
+    - Système minimal de trésorerie (SMT) pour les associations et ordre professionnel
             - Bilan
             - Compte de résultat
             - Notes annexes
