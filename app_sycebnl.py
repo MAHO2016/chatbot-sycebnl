@@ -275,6 +275,188 @@ Conditions :
 a) Gere a titre benevole — remuneration possible si ne depasse pas 10 fois le SMIG.
 b) Depot rapport d'activite au plus tard le 30 avril de chaque annee.
 
+
+ARTICLES OFFICIELS DE L'ACTE UNIFORME SYCEBNL — PRIORITE ABSOLUE :
+
+Article 1 : Il est institue un systeme comptable unique commun a tous les Etats parties
+denomme SYCEBNL. Toute entite a but non lucratif ayant son siege dans un Etat partie
+ou y exercant ses activites est soumise aux dispositions du present Acte uniforme.
+
+Article 2 : L'entite a but non lucratif est toute organisation poursuivant un but
+desinteresse dont les ressources servent au fonctionnement et a la realisation de son
+objet social. Constituent notamment des EBNL :
+1) les associations et les ordres professionnels
+2) les entites ayant pour objet la gestion ou l'administration de projets de
+developpement finances par les bailleurs bilatéraux, multilateraux, prives ou etatiques.
+
+Article 3 : Les dispositions de l'Acte uniforme relatif au droit comptable et a
+l'information financiere sont applicables aux EBNL, a l'exception des articles
+5, X, 10a, 13, 17 alineas 7 et 8, 18, 19 quatrieme tiret, 21, 25 a 34, 49, 60, 70,
+71, 73 a 113.
+
+Article 4 : Un jeu complet d'etats financiers annuels comprend :
+Pour les associations et ordres professionnels :
+- le Bilan
+- le Compte de resultat
+- le Tableau des flux de tresorerie
+- les Notes annexes
+Pour les projets de developpement :
+- le Tableau emplois-ressources
+- le Tableau d'execution budgetaire
+- le Tableau de reconciliation de tresorerie
+- le Bilan
+- le Compte d'exploitation
+- les Notes annexes
+
+Article 5 : Les presentations admises sont le Systeme normal et le Systeme minimal
+de tresorerie (SMT). Toute entite est soumise au Systeme normal sauf exception liee
+a sa taille. Le regime juridique du depot des etats financiers est soumis a la
+legislation interne de chaque Etat partie.
+
+Article 6 : Les petites entites sont assujetties au SMT si leurs ressources annuelles
+sont inferieures ou egales a 30 000 000 FCFA pour chaque categorie :
+1) subventions : 30 000 000 FCFA
+2) cotisations et autres revenus : 30 000 000 FCFA
+3) dons et/ou legs : 30 000 000 FCFA
+4) ressources du projet de developpement : 30 000 000 FCFA
+5) autres ressources : 30 000 000 FCFA
+Si l'une des ressources depasse ce seuil ou si de maniere cumulee sur deux exercices
+les ressources depassent 30 000 000 FCFA, l'entite est eligible au Systeme normal.
+
+Article 7 : Le Bilan decrit separement actif et passif et fait apparaitre les fonds
+propres. Le Compte de resultat recapitule produits et charges faisant apparaitre
+l'excedent net ou le deficit net. Le Compte d'exploitation des projets recapitule
+les charges sans amortissement et une quotite des ressources pour un solde nul.
+Le Tableau des flux de tresorerie retrace les mouvements entrees/sorties de liquidites.
+Le Tableau emplois-ressources recapitule emplois, immobilisations et charges ainsi que
+les fonds recus des bailleurs. Le Tableau d'execution budgetaire montre le budget et
+les realisations. Le Tableau de reconciliation retrace les mouvements de tresorerie.
+Les Notes annexes completent et precisent l'information des autres etats financiers.
+
+Article 8 : Le Bilan fait apparaitre :
+A l'actif : actif immobilise, actif circulant, tresorerie-actif, ecart de conversion-actif.
+Au passif : ressources stables, passif circulant, tresorerie-passif, ecart de conversion-passif.
+
+Article 9 : Le Compte de resultat fait apparaitre au credit les produits et au debit
+les charges selon leur nature. Pour les projets, le Compte d'exploitation fait apparaitre
+au debit les charges sans amortissement et au credit une quotite des ressources pour
+un solde nul.
+
+Article 10 : Le Tableau des flux de tresorerie fait apparaitre : la tresorerie nette
+en debut d'exercice, les flux des activites operationnelles, les flux des operations
+d'investissement, les flux des fonds propres, les flux des fonds exterieurs et la
+tresorerie nette en fin d'exercice.
+
+Article 11 : Le Tableau emplois-ressources fait apparaitre les emplois (immobilisations
+et charges) sans amortissement ni depreciation, les fonds recus, l'excedent ou le
+deficit des fonds recus sur les emplois, le montant de l'encaisse disponible.
+
+Article 12 : Le Tableau d'execution budgetaire fait apparaitre le budget de l'exercice,
+les decaissements, les engagements non encore payes, les realisations, le credit
+disponible du budget et l'execution du budget en valeur relative.
+
+Article 13 : Le Tableau de reconciliation de tresorerie retrace la tresorerie de debut
+d'exercice, les transferts de fonds recus des bailleurs, les emplois de l'exercice,
+la tresorerie de fin d'exercice et les paiements en instance.
+
+Article 14 : Le livre d'inventaire est un document obligatoire sur lequel sont transcrits :
+1) Pour les associations et ordres professionnels : le Bilan, le Compte de resultat
+et le Tableau des flux de tresorerie de chaque exercice ainsi que le resume de
+l'operation d'inventaire.
+2) Pour les projets de developpement : le Tableau emplois-ressources, le Tableau
+d'execution budgetaire, le Tableau de reconciliation de tresorerie, le Bilan, le
+Compte d'exploitation de chaque exercice ainsi que le resume de l'operation d'inventaire.
+
+Article 15 : Les etats financiers annuels sont accompagnes de Notes annexes organisees
+par reference croisee. Les Notes annexes contiennent des informations complementaires,
+des descriptions narratives ou decompositions d'elements presentes dans les autres
+etats financiers, ainsi que des informations relatives aux elements ne repondant pas
+aux criteres de comptabilisation. Toute modification dans la presentation ou les
+methodes d'evaluation doit etre signalee dans les Notes annexes.
+
+Article 16 : Les etats financiers annuels respectent :
+1) le recours a un plan de comptes normalise SYCEBNL
+2) la tenue obligatoire de livres comptables et mise en place de procedures de
+controle interne
+3) a la cloture, etablissement de l'inventaire, des etats financiers et d'un rapport
+d'activite exposant la situation, les perspectives et l'evolution de la tresorerie
+4) le Bilan d'ouverture doit correspondre au Bilan de cloture de l'exercice precedent
+5) toute compensation non juridiquement fondee entre actif/passif ou charges/produits
+est interdite
+6) la presentation des etats financiers est identique d'un exercice a l'autre
+7) chaque poste comporte le chiffre de l'exercice precedent.
+
+Article 17 : Il est etabli pour chaque EBNL un registre des donateurs pour tous les
+dons, donations et legs recus. Ce registre est cote, paraphe et numerote par la
+juridiction competente. Il contient :
+1) la date de l'operation
+2) les nom, prenoms, domicile et adresse electronique des personnes physiques donatrices
+3) la denomination, numero d'immatriculation, numero d'identification fiscale, adresse
+du siege et adresse electronique des personnes morales donatrices
+4) le montant et le mode de liberation du don/legs (especes, cheque, virement ou nature).
+Toutes les ecritures doivent etre signees par le representant legal de l'EBNL.
+Ce registre peut etre tenu en version physique ou electronique.
+
+Article 18 : L'entite tient a jour le registre des donateurs. S'il existe un auditeur,
+il soumet un rapport constatant l'existence du registre et donnant son avis sur sa tenue.
+S'il n'existe pas d'auditeur, une declaration des dirigeants attestant la tenue conforme
+est annexee au rapport ou soumise a l'assemblee generale.
+
+Article 19 : Toute EBNL doit designer au moins un auditeur si elle remplit l'un
+des criteres suivants a la cloture de l'exercice :
+1) total du bilan superieur a 100 000 000 FCFA
+2) ressources annuelles superieures a 200 000 000 FCFA
+3) effectif permanent superieur a 20 personnes.
+L'entite n'est plus tenue de designer un auditeur si elle ne remplit plus aucun de
+ces criteres pendant les 2 exercices precedant l'expiration du mandat.
+Pour les autres EBNL ne remplissant pas ces criteres, la nomination est facultative
+mais peut etre demandee en justice par au moins 10% des membres.
+Les etats financiers sont transmis a l'auditeur 45 jours au moins avant l'assemblee
+generale ordinaire.
+
+Article 20 : L'auditeur est choisi parmi les experts-comptables inscrits au tableau
+de l'ordre des experts-comptables ou de l'organe qui en tient lieu dans chaque Etat partie.
+
+Article 21 : L'auditeur est nomme pour 3 exercices renouvelables une fois. Si l'entite
+a une existence inferieure a 3 exercices, son mandat est ramene a cette duree.
+L'auditeur est nomme par l'assemblee generale a la majorite des membres representant
+plus de la moitie des membres presents ou representes.
+Si le quorum n'est pas atteint sur deuxieme convocation, tout membre peut demander
+a la juridiction competente la designation d'un auditeur.
+
+Article 22 : Si l'assemblee ne procede pas au renouvellement du mandat de l'auditeur
+a son expiration, la mission est prorogee sauf refus expres de sa part, jusqu'a la
+prochaine assemblee generale statuant sur les comptes.
+
+Article 23 : Il est procede regulierement par voie de Decision du Conseil des ministres
+de l'OHADA a la mise a jour du SYCEBNL, sur recommandation de la Commission de
+normalisation pour la profession comptable.
+
+Article 24 : Encourent une sanction penale les dirigeants des EBNL qui :
+- n'ont pas dresse l'inventaire et etabli les etats financiers annuels ainsi que
+le rapport d'activite
+- ont sciemment etabli des etats financiers ne donnant pas une image fidele
+- n'ont pas tenu et mis a jour le registre des donateurs.
+
+Article 25 : Encourent une sanction penale les dirigeants qui n'ont pas provoque
+la designation de l'auditeur ou ne l'ont pas convoque a l'assemblee generale statuant
+sur les comptes.
+
+Article 26 : Encourent une sanction penale les dirigeants ou toute personne au service
+de l'entite qui ont fait obstacle aux verifications de l'auditeur ou refuse la
+communication des pieces utiles a sa mission (contrats, livres, documents comptables,
+registres).
+
+Article 27 : Les infractions prevues par le present Acte uniforme sont punies
+conformement aux dispositions du droit penal en vigueur dans chaque Etat partie.
+
+Article 28 : Le present Acte uniforme, auquel est annexe le systeme comptable des
+entites a but non lucratif, sera publie au Journal Officiel de l'OHADA dans un delai
+de soixante (60) jours a compter de la date de son adoption. Il sera egalement publie
+dans les Etats parties au Journal Officiel ou par tout autre moyen approprie.
+Le present Acte uniforme est applicable a compter du 1er janvier 2024.
+
+
 COMPTES DE REFERENCE OBLIGATOIRES :
 - Caisse : 5711 | Banque : 5211 | Virement de fonds : 585
 - Adherents / Fideles : 4111 | Dimes/quetes : 7044
