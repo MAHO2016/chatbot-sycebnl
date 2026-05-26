@@ -181,13 +181,11 @@ else:
         vectorstore = FAISS.from_documents(
             documents=morceaux, embedding=embeddings)
         vectorstore.save_local(dossier_db)
-
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
-    llm = ChatOpenAI(
+        retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
+        llm = ChatOpenAI(
         model="gpt-4o-mini", temperature=0.2,
         api_key=OPENAI_API_KEY)
-    return llm, retriever
-
+        return llm, retriever
 
 PROMPT = """Tu es un assistant specialise UNIQUEMENT dans :
 1. Le SYCEBNL (Systeme Comptable des Entites a But Non Lucratif)
