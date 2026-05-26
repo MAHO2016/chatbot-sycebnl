@@ -12,10 +12,8 @@ st.set_page_config(
     layout="wide"
 )
 
-# === CSS PERSONNALISE ===
 st.markdown("""
 <style>
-    /* Header */
     .expertasso-header {
         background: #1A3C8A;
         padding: 1.2rem 2rem;
@@ -52,7 +50,6 @@ st.markdown("""
         font-family: Arial, sans-serif;
         margin: 0;
     }
-    /* Badges */
     .badge-container {
         display: flex;
         gap: 10px;
@@ -81,11 +78,6 @@ st.markdown("""
         color: #CC0000;
         border: 1px solid #FF0000;
     }
-    /* Messages */
-    .stChatMessage {
-        font-family: Arial, sans-serif;
-    }
-    /* Footer */
     .expertasso-footer {
         background: #1A3C8A;
         padding: 10px 2rem;
@@ -105,30 +97,27 @@ st.markdown("""
         font-size: 11px;
         font-family: Arial, sans-serif;
     }
-    /* Masquer le menu Streamlit */
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
 </style>
 """, unsafe_allow_html=True)
 
-# === HEADER ===
 st.markdown("""
 <div class="expertasso-header">
     <div class="expertasso-logo">EA</div>
     <div>
         <p class="expertasso-title">ExpertAsso</p>
-        <p class="expertasso-subtitle">Assistant IA spécialisé SYCEBNL · Bénin</p>
+        <p class="expertasso-subtitle">Assistant IA specialise SYCEBNL · Benin</p>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-# === BADGES ===
 st.markdown("""
 <div class="badge-container">
-    <span class="badge badge-blue">📘 Comptabilité SYCEBNL</span>
-    <span class="badge badge-gold">⚖️ Législation Associations Bénin</span>
-    <span class="badge badge-red">🏛️ Fiscalité CGI Bénin 2026</span>
+    <span class="badge badge-blue">Comptabilite SYCEBNL</span>
+    <span class="badge badge-gold">Legislation Associations Benin</span>
+    <span class="badge badge-red">Fiscalite CGI Benin 2026</span>
 </div>
 """, unsafe_allow_html=True)
 
@@ -145,6 +134,7 @@ FICHIERS_DRIVE = {
     "AU_SYCEBNL.pdf"                  : "1PjwvGKxN4QYA4ke8gZWRYDwSWAcpfI4J",
 }
 
+
 def telecharger_fichiers():
     os.makedirs("documents", exist_ok=True)
     for nom, file_id in FICHIERS_DRIVE.items():
@@ -156,19 +146,20 @@ def telecharger_fichiers():
                 for chunk in response.iter_content(chunk_size=8192):
                     f.write(chunk)
 
+
 @st.cache_resource
 def charger_modele():
     telecharger_fichiers()
     dossier_docs = "documents"
-    dossier_db   = "faiss_index"
+    dossier_db = "faiss_index"
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
-if False:
-       vectorstore = FAISS.load_local(
+    if False:
+        vectorstore = FAISS.load_local(
             dossier_db, embeddings,
             allow_dangerous_deserialization=True
         )
-else:
+    else:
         documents = []
         for fichier in os.listdir(dossier_docs):
             if fichier.endswith('.pdf'):
@@ -181,11 +172,13 @@ else:
         vectorstore = FAISS.from_documents(
             documents=morceaux, embedding=embeddings)
         vectorstore.save_local(dossier_db)
-        retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
-        llm = ChatOpenAI(
+
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
+    llm = ChatOpenAI(
         model="gpt-4o-mini", temperature=0.2,
         api_key=OPENAI_API_KEY)
-        return llm, retriever
+    return llm, retriever
+
 
 PROMPT = """Tu es un assistant specialise UNIQUEMENT dans :
 1. Le SYCEBNL (Systeme Comptable des Entites a But Non Lucratif)
@@ -436,57 +429,47 @@ def generer_reponse(llm, retriever, historique, question):
     return reponse.content
 
 
-# === INTERFACE CHAT ===
-llm, retriever = charger_modele()
-
-if "messages" not in st.session_state:
-    st.session_state.messages = []
-
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-# === LIMITE DE MESSAGES ===
 MAX_MESSAGES = 20
 
-if "nombre_questions" not in st.session_state:
-    st.session_state.nombre_questions = 0
-
-# Afficher compteur
-questions_restantes = MAX_MESSAGES - st.session_state.nombre_questions
-if questions_restantes <= 5:
-    st.warning(f"⚠️ Il vous reste {questions_restantes} question(s) dans cette session.")
-
-# Mots-cles hors sujet
 HORS_SUJET = [
     "recette", "cuisine", "football", "sport", "politique",
-    "météo", "film", "musique", "amour", "jeu", "blague",
-    "python", "programmation", "code", "intelligence artificielle"
+    "meteo", "film", "musique", "amour", "jeu", "blague",
+    "python", "programmation", "code"
 ]
+
 
 def est_hors_sujet(question):
     question_lower = question.lower()
     return any(mot in question_lower for mot in HORS_SUJET)
 
+
+llm, retriever = charger_modele()
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+if "nombre_questions" not in st.session_state:
+    st.session_state.nombre_questions = 0
+
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
+
+questions_restantes = MAX_MESSAGES - st.session_state.nombre_questions
+if questions_restantes <= 5:
+    st.warning(f"Il vous reste {questions_restantes} question(s) dans cette session.")
+
 if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
-
-    # Vérifier limite
     if st.session_state.nombre_questions >= MAX_MESSAGES:
-        st.error("Vous avez atteint la limite de 20 questions par session. Cliquez sur 'Nouvelle conversation' pour recommencer.")
-
-    # Vérifier hors sujet
+        st.error("Limite de 20 questions atteinte. Cliquez sur 'Nouvelle conversation'.")
     elif est_hors_sujet(question):
         st.session_state.messages.append({"role": "user", "content": question})
         with st.chat_message("user"):
             st.markdown(question)
+        reponse_hs = "Je suis specialise uniquement dans le SYCEBNL, la loi sur les associations et la fiscalite au Benin."
         with st.chat_message("assistant"):
-            st.markdown("Je suis spécialisé uniquement dans le SYCEBNL, la loi sur les associations et la fiscalité au Bénin. Je ne peux pas répondre à cette question.")
-        st.session_state.messages.append({
-            "role": "assistant",
-            "content": "Je suis spécialisé uniquement dans le SYCEBNL, la loi sur les associations et la fiscalité au Bénin. Je ne peux pas répondre à cette question."
-        })
-
-    # Question valide
+            st.markdown(reponse_hs)
+        st.session_state.messages.append({"role": "assistant", "content": reponse_hs})
     else:
         st.session_state.messages.append({"role": "user", "content": question})
         with st.chat_message("user"):
@@ -499,21 +482,19 @@ if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
                     question
                 )
             st.markdown(reponse)
-        st.session_state.messages.append(
-            {"role": "assistant", "content": reponse})
+        st.session_state.messages.append({"role": "assistant", "content": reponse})
         st.session_state.nombre_questions += 1
 
-# === BOUTON REINITIALISATION ===
 col1, col2, col3 = st.columns([4, 2, 4])
 with col2:
-    if st.button("🔄 Nouvelle conversation"):
+    if st.button("Nouvelle conversation"):
         st.session_state.messages = []
+        st.session_state.nombre_questions = 0
         st.rerun()
 
-# === FOOTER ===
 st.markdown("""
 <div class="expertasso-footer">
-    <span class="footer-left">© 2026 ExpertAsso · Bénin</span>
+    <span class="footer-left">2026 ExpertAsso Benin</span>
     <span class="footer-right">ComptaProgresso</span>
 </div>
 """, unsafe_allow_html=True)
