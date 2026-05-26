@@ -163,8 +163,8 @@ def charger_modele():
     dossier_db   = "faiss_index"
     embeddings = OpenAIEmbeddings(api_key=OPENAI_API_KEY)
 
-if os.path.exists(dossier_db) and os.path.exists("documents/AU_SYCEBNL.pdf"):
-        vectorstore = FAISS.load_local(
+if False:
+       vectorstore = FAISS.load_local(
             dossier_db, embeddings,
             allow_dangerous_deserialization=True
         )
