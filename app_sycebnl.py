@@ -449,6 +449,120 @@ Article 28
 Le présent Acte uniforme, auquel est annexé le système comptable des entités à but non lucratif, sera publié au Journal Officiel de l'OHADA dans un délai de soixante (60) jours à compter de la date de son adoption. Il sera également publié dans les États parties au Journal Officiel ou par tout autre moyen approprié.
 Le présent Acte uniforme est applicable à compter du 1er janvier 2024.
 
+FISCALITE DES ONG, ASSOCIATIONS ET FONDATIONS AU BENIN
+(Source : Livre "Comptabilite des ONG, Associations et Fondations" — Odilon A. MAFON)
+
+=== IMPOTS A PAYER ===
+
+1. IMPOT SUR LE REVENU FONCIER (IRF) — Article 102 CGI :
+Les associations, ONG et fondations qui mettent en location des immeubles
+sont soumises a l'IRF.
+"Sont considerees comme personnes physiques assimilees : les associations,
+les organisations non gouvernementales, lorsqu'ils sont titulaires uniquement
+de revenus fonciers."
+
+2. VERSEMENT PATRONAL SUR SALAIRES (VPS) — Articles 191-192 CGI :
+Les associations et ONG qui paient des salaires sont assujetties au VPS.
+Exception : les associations et ONG peuvent beneficier d'une exoneration
+du VPS en fonction des accords avec l'Etat.
+Les associations ne beneficiant pas d'une exoneration expresse ne sont
+pas concernees.
+
+3. TAXE FONCIERE UNIQUE (TFU) — Articles 151-152 CGI :
+Si l'association, l'ONG ou la fondation est proprietaire d'un immeuble
+(bati ou non), elle doit payer la TFU, sauf derogation expresse.
+
+4. TAXE SUR LES VEHICULES A MOTEUR (TVM) — Article 166 CGI :
+Les vehicules a moteur d'au moins 3 roues immatricules et utilises pour
+le transport sont soumis a la TVM annuelle.
+
+=== EXONERATIONS ===
+
+1. IMPOT SUR LES SOCIETES (IS) — Article 4-9 CGI :
+Les associations et organismes sans but lucratif legalement constitues
+et dont la gestion est desinteressee sont EXONERES de l'IS.
+Conditions de gestion desinteressee :
+a) Gere a titre benevole — remuneration possible si transparence financiere
+   et remuneration mensuelle ne depassant pas 10 fois le SMIG.
+b) Depot rapport d'activite au plus tard le 30 avril de chaque annee.
+
+2. PLUS-VALUES — Article 19 CGI :
+Les associations a but non lucratif et les fondations ne peuvent pas
+beneficier du regime de faveur sur les reevaluations.
+
+3. REVENUS DES CREANCES — Article 80 CGI :
+Sont exoneres de l'IRCM : les parts d'interet, emprunts ou obligations
+des societes cooperatives agricoles et associations agricoles.
+
+4. TVA — Article 229 CGI :
+Sont exoneres de la TVA :
+"Les services rendus benevolement ou a un prix egal ou inferieur au prix
+de revient par les associations et organismes vises au paragraphe 9 de
+l'article 4 du CGI et les etablissements d'utilite publique."
+
+5. TAXE SUR LES VEHICULES A MOTEUR (TVM) — Article 167 CGI :
+Sont exempts de TVM :
+- Les vehicules immatricules au nom de l'Etat beninois
+- Les vehicules immatricules au nom du corps diplomatique et
+  organisations internationales
+- Les vehicules des ONG internationales ayant signe un accord de
+  siege avec la Republique du Benin
+
+=== RETENUES A LA SOURCE ===
+Les associations et ONG ne paient pas directement ces impots mais doivent
+les retenir et les reverser a l'Etat :
+
+1. IRCM — Article 69 CGI :
+Soumis a l'IRCM : les revenus verses aux membres des conseils
+d'administration des organismes et associations a but non lucratif.
+
+2. ITS (Impot sur les Traitements et Salaires) — Article 128 CGI :
+L'impot est preleve a la source au moment du paiement des salaires
+par tout employeur, y compris les associations.
+
+3. AIB (Acompte d'Impot assis sur le Benefice) — Articles 130-134 CGI :
+Les associations et organismes a but non lucratif nationaux et
+internationaux doivent retenir l'AIB sur tous les paiements faits aux
+fournisseurs de travaux, biens et prestataires de services.
+L'AIB est retenu a la source par les associations et reverse a la DGI.
+
+=== AUTRES OBLIGATIONS ===
+
+1. ENREGISTREMENT DES ACTES — Article 327 CGI :
+Sont enregistres gratuitement les actes des associations dont les
+recettes annuelles sont constituees a 80% au moins de fonds publics.
+
+2. OBLIGATIONS SOCIALES :
+Les associations employeurs doivent :
+- Declarer les salaires a la CNSS
+- Payer les cotisations sociales patronales
+- Respecter les obligations du Code du Travail
+
+3. DECLARATION ANNUELLE DES SOMMES VERSEES AUX TIERS :
+Les associations doivent declarer annuellement les sommes versees
+aux tiers (prestataires, fournisseurs).
+
+4. ATTESTATION DE REGULARITE FISCALE :
+Les associations doivent disposer d'une attestation de regularite
+fiscale pour certaines operations.
+
+5. DEPOT DU RAPPORT D'ACTIVITE :
+Obligation de deposer le rapport d'activite (moral et financier) au plus
+tard le 30 avril de chaque annee aupres des services fiscaux.
+
+=== TABLEAU RECAPITULATIF ===
+| Impot/Taxe | Association EBNL | Condition |
+| IS | EXONERE | Gestion desinteressee + depot rapport |
+| TVA | EXONERE | Services benevoles ou prix <= prix de revient |
+| IRF | DU | Si location d'immeuble |
+| TFU | DUE | Si proprietaire d'immeuble |
+| TVM | DUE | Si vehicule immatricule (sauf accord siege) |
+| VPS | EXONERE possible | Selon accord avec l'Etat |
+| ITS | A RETENIR | Sur salaires payes |
+| AIB | A RETENIR | Sur paiements fournisseurs |
+| IRCM | A RETENIR | Sur revenus administrateurs |
+
+
 
 ECRITURES TYPES VALIDEES — EGLISE :
 
