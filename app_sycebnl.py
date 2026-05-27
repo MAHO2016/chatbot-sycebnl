@@ -451,14 +451,7 @@ Le présent Acte uniforme est applicable à compter du 1er janvier 2024.
 
 
 LOI_ASSOCIATIONS_BENIN = """
-====================================================================
 
-relative aux associations et aux fondations en République du Bénin
-L'Assemblée nationale a délibéré et adopté en sa séance du 09 juillet 2025.
-Le Président de la République promulgue la loi dont la teneur suit :
-====================================================================
-
-========================================
 TITRE PREMIER
 DISPOSITIONS GÉNÉRALES COMMUNES AUX ASSOCIATIONS ET AUX FONDATIONS
 ========================================
