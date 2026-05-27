@@ -1279,6 +1279,128 @@ C05 — Avance sur salaire accordee en caisse :
     Debit  422 Personnel du / Credit 5711 Caisse
     Libelle : S/Paiement avance
 
+
+=== ECRITURES COMPTABLES GENERALES DES ASSOCIATIONS ===
+
+A. COTISATIONS DES MEMBRES :
+Appel de cotisation :
+  Debit  411 Adherents / Credit 701 Cotisations des adherents
+Recouvrement :
+  Debit  5711 Caisse ou 5211 Banque / Credit 411 Adherents
+Creance douteuse :
+  Debit  4161 Adherents cotisations douteuses / Credit 411 Adherents
+  Debit  6594 Charges depreciations creances / Credit 4912 Depreciations creances douteuses
+
+B. DROIT D'ENTREE (nouveau membre) :
+Sans precision (par nature) :
+  Debit  411 Adherents / Credit 103 Droit d'entree
+Si objectif de financer l'entite :
+  Debit  411 Adherents / Credit 1851 Depots recus
+S'il represente un produit :
+  Debit  411 Adherents / Credit 701 Cotisations des adherents
+Paiement :
+  Debit  5211 Banque ou 5711 Caisse / Credit 411 Adherents
+
+C. APPORTS :
+Souscription des apports :
+  Debit  45 Fondateurs apporteurs / Credit 101 Dotation non consomptible sans droit reprise
+  Debit  45 Fondateurs apporteurs / Credit 102 Dotation non consomptible avec droit reprise
+  Debit  45 Fondateurs apporteurs / Credit 1041 Dotation consomptible
+Liberation des apports :
+  Debit  2 Immobilisations / Credit 45 Fondateurs apporteurs
+  Debit  5 Tresorerie / Credit 45 Fondateurs apporteurs
+
+D. SUBVENTIONS D'INVESTISSEMENT :
+Notification de la subvention :
+  Debit  4731 Subventions a recevoir / Credit 14 Subventions d'investissement
+Reception des fonds :
+  Debit  5211 Banque / Credit 4731 Subventions a recevoir
+Acquisition de l'immobilisation :
+  Debit  2 Immobilisations / Credit 4812 Fournisseurs d'investissement
+  Debit  4812 Fournisseurs d'investissement / Credit 5211 Banque
+A la cloture — Amortissement :
+  Debit  6813 Dotations amortissements / Credit 284 Amortissement materiel
+Reprise subvention :
+  Debit  14 Subventions d'investissement / Credit 799 Reprises subventions investissement
+
+E. FONDS AFFECTES A UN PROJET :
+Reception des fonds :
+  Debit  5 Tresorerie / Credit 165 Fonds affectes a un projet specifique
+Au fur et a mesure des consommations :
+  Debit  165 Fonds affectes / Credit 7925 Reprises fonds affectes projet specifique
+
+F. CONTRIBUTIONS VOLONTAIRES EN NATURE (benevoles) :
+  Debit  900 Secours en nature / Credit 910 Dons en nature
+  Debit  904 Personnel benevole / Credit 914 Benevolat
+NB : Valorisation au taux horaire du SMIG (300 FCFA/heure)
+
+G. REEVALUATION DES IMMOBILISATIONS :
+  Debit  22 Terrain (ou autre immo) / Credit 106 Ecart de reevaluation
+
+H. RESERVES :
+Affectation excedent :
+  Debit  131 Resultat net excedent / Credit 11 Reserves
+Incorporation aux reserves :
+  Debit  11 Reserves / Credit 101 ou 102 Dotation non consomptible
+Imputation deficit :
+  Debit  11 Reserves / Credit 139 Resultat net deficit
+
+=== ECRITURES SALAIRES ET CHARGES SOCIALES ===
+
+I. CONSTATATION DU SALAIRE :
+  Debit  6611 Appointements salaires / Credit 422 Personnel remunerations dues (salaire brut)
+
+J. DEDUCTIONS (retenues sur salaire) :
+  Debit  422 Personnel remunerations dues
+    Credit 4211 Personnel avances
+    Credit 4472 Impots sur salaires ITS
+    Credit 4318 Autres cotisations sociales CNSS 3.6%
+NB : En mars deduire 1000 FCFA ORTB et 3000 FCFA en juin (compte 4478)
+
+K. VERSEMENT DU SALAIRE NET :
+  Debit  422 Personnel remunerations dues / Credit 5 Tresorerie
+
+L. CHARGES PATRONALES :
+  Debit  6641 Charges sociales
+    Credit 4311 Prestations familiales 9% salaire brut
+    Credit 4312 Accidents de travail (taux de risque)
+    Credit 4318 Autres cotisations sociales 6.4%
+
+M. VPS (Versement Patronal sur Salaires) :
+  Debit  6413 Taxes sur appointements et salaires / Credit 4428 Autres impots et taxes
+Reversement le 10 du mois suivant :
+  Debit  4428 / Credit 5 Tresorerie
+
+=== ECRITURES IMPOTS ET TAXES ===
+
+N. IRF (Impot sur Revenu Foncier) :
+Constatation : Debit 6411 Impots fonciers / Credit 4421 Impots et taxes d'Etat
+Paiement au 10 fevrier : Debit 4421 / Credit 5 Tresorerie
+
+O. TFU (Taxe Fonciere Unique) :
+Constatation : Debit 6411 / Credit 4422 Impots taxes collectivites publiques
+Paiement 10 fevrier (50%) et 30 avril (50%) : Debit 4422 / Credit 5 Tresorerie
+
+P. TVM (Taxe Vehicules a Moteur) :
+Constatation : Debit 6464 Vignettes / Credit 4421 Impots et taxes d'Etat
+Paiement au 30 avril : Debit 4421 / Credit 5 Tresorerie
+
+Q. AIB (Retenue sur prestations) :
+Constatation prestation : Debit 6327 Remunerations autres prestataires / Credit 4011 Fournisseur
+Paiement net (3% immatricule / 5% non immatricule / 20% etranger) :
+  Debit 4011 Fournisseur / Credit 5 Tresorerie + Credit 4478 Autres impots contributions
+Reversement AIB le 10 du mois suivant : Debit 4478 / Credit 5 Tresorerie
+
+R. IRCM (sur remunerations administrateurs) :
+Retenue : Credit 4478 Autres impots et contributions
+Reversement le 10 du mois suivant : Debit 4478 / Credit 5 Tresorerie
+
+R. LOYER RETENU A LA SOURCE (IRF sur loyer paye) :
+Constatation loyer : Debit 6222 Loyers / Credit 4011 Fournisseur
+Paiement net (loyer - 12% IRF) :
+  Debit 4011 Fournisseur / Credit 5 Tresorerie + Credit 4478 AIB/retenue
+Reversement retenue le 10 fevrier : Debit 4478 / Credit 5 Tresorerie
+
 REGLE ABSOLUE SUR LES ECRITURES :
 - Remplace X par le montant exact mentionne par l'utilisateur
 - Ne changes JAMAIS les numeros de comptes
