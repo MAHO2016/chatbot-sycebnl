@@ -450,32 +450,265 @@ Le présent Acte uniforme, auquel est annexé le système comptable des entités
 Le présent Acte uniforme est applicable à compter du 1er janvier 2024.
 
 
+ECRITURES TYPES VALIDEES — EGLISE :
 
-COMPTES DE REFERENCE OBLIGATOIRES :
-- Caisse : 5711 | Banque : 5211 | Virement de fonds : 585
-- Adherents / Fideles : 4111 | Dimes/quetes : 7044
-- Dons : 7041 | Cotisations : 701 | Legs : 7042
+COMPTES DE REFERENCE :
+- Caisse : 5711 | Banque : 5211 | Virement de fonds : 5850
+- Fideles/Adherents : 4111 | Fournisseur : 4011
+- Personnel du : 422 | Securite sociale : 4318
+- Fournisseurs investissement immo corporelle : 4812
+- Fournisseurs investissement immo incorporelle : 4811
 
-ECRITURES TYPES VALIDEES :
+=== RECETTES ===
 
-E01 — Collecte dime/quete/offrande en especes :
-  Tresorerie : Debit 5711 / Credit 7044 — Libelle : S/Encaissement dimes
-  Engagement : Debit 4111/Credit 7044 puis Debit 5711/Credit 4111
+E01 — Collecte dime/offrande en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7044 Dimes recues
+    Libelle : S/Encaissement des dimes
+  Engagement (2 ecritures) :
+    Debit  4111 Fideles / Credit 7044 Dimes recues — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Fideles — Libelle : S/Encaissement des quetes
 
-E02 — Versement especes en banque :
-  Debit 5211/Credit 585 (bordereau) puis Debit 585/Credit 5711 (avis credit)
+E02 — Collecte dime/offrande par banque :
+  Tresorerie (1 ecriture) :
+    Debit  5211 Banque / Credit 7044 Dimes recues
+    Libelle : S/Encaissement des dimes
+  Engagement (2 ecritures) :
+    Debit  4111 Fideles / Credit 7044 Dimes recues — Libelle : S/Engagement
+    Debit  5211 Banque / Credit 4111 Fideles — Libelle : S/Encaissement
 
-E03 — Don en especes :
-  Tresorerie : Debit 5711 / Credit 7041
-  Engagement : Debit 4111/Credit 7041 puis Debit 5711/Credit 4111
+E03 — Versement collectes en banque :
+  Tresorerie ET Engagement (2 ecritures identiques) :
+    Debit  5211 Banque / Credit 5850 Virement de fonds — Libelle : S/Bordereau de versement
+    Debit  5850 Virement de fonds / Credit 5711 Caisse — Libelle : S/Avis de credit
 
-E04 — Don par virement :
-  Tresorerie : Debit 5211 / Credit 7041
-  Engagement : Debit 4111/Credit 7041 puis Debit 5211/Credit 4111
+E04 — Cotisation annuelle fidelee par banque :
+  Tresorerie (1 ecriture) :
+    Debit  5211 Banque / Credit 7011 Cotisations
+    Libelle : S/Encaissement de cotisation
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7011 Cotisations — Libelle : S/Engagement
+    Debit  5211 Banque / Credit 4111 Adherents — Libelle : S/Encaissement de cotisation
 
-E05 — Cotisation en especes :
-  Tresorerie : Debit 5711 / Credit 701
-  Engagement : Debit 4111/Credit 701 puis Debit 5711/Credit 4111
+E04b — Cotisation annuelle fidele en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7011 Cotisations
+    Libelle : S/Encaissement de cotisation
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7011 Cotisations — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Adherents — Libelle : S/Encaissement de cotisation
+
+E05 — Recette funerailles/bapteme/mariage en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7061 Revenus des manifestations
+    Libelle : S/Encaissement
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7061 Revenus des manifestations — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Adherents — Libelle : S/Encaissement
+
+E05b — Recette funerailles/bapteme/mariage par banque :
+  Tresorerie (1 ecriture) :
+    Debit  5211 Banque / Credit 7061 Revenus des manifestations
+    Libelle : S/Encaissement
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7061 Revenus des manifestations — Libelle : S/Engagement
+    Debit  5211 Banque / Credit 4111 Adherents — Libelle : S/Encaissement
+
+E07 — Vente de Bibles en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7081 Ventes de dons en nature
+    Libelle : S/Encaissement de la vente
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7081 Ventes de dons en nature — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Adherents — Libelle : S/Encaissement de la vente
+
+E07b — Vente livres religieux produits par eglise en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7053 Ventes de produits finis
+    Libelle : S/Encaissement de la vente
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7053 Ventes de produits finis — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Adherents — Libelle : S/Encaissement de la vente
+
+E07c — Vente livres religieux achetes par eglise en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7051 Ventes de marchandises
+    Libelle : S/Encaissement de la vente
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7051 Ventes de marchandises — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Adherents — Libelle : S/Encaissement de la vente
+
+E08 — Loyer encaisse bien immobilier eglise en especes :
+  Tresorerie (1 ecriture) :
+    Debit  5711 Caisse / Credit 7071 Produits accessoires
+    Libelle : S/Encaissement
+  Engagement (2 ecritures) :
+    Debit  4111 Adherents / Credit 7071 Produits accessoires — Libelle : S/Engagement
+    Debit  5711 Caisse / Credit 4111 Adherents — Libelle : S/Encaissement
+
+E09 — Interets bancaires credites DAT :
+  Tresorerie ET Engagement (1 ecriture) :
+    Debit  5211 Banque / Credit 7747 Revenus des DAT
+    Libelle : S/Encaissement interets
+
+=== CHARGES ET DEPENSES ===
+
+E11 — Achat cierges/encens/accessoires liturgiques par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6047 Achats fournitures liturgiques / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6047 Achats fournitures liturgiques / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5211 Banque — Libelle : S/Paiement
+
+E12 — Reglement fournisseur fournitures en caisse :
+  Tresorerie ET Engagement (1 ecriture) :
+    Debit  4011 Fournisseur / Credit 5711 Caisse
+    Libelle : S/Paiement
+
+E13 — Paiement loyer salle de culte par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6222 Loyers / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6222 Loyers / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5211 Banque — Libelle : S/Paiement
+
+E14 — Paiement prime assurance par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6252 Assurances materiel transport / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6252 Assurances materiel transport / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5211 Banque — Libelle : S/Paiement
+
+E15 — Versement salaire pasteur/employe en caisse :
+  Tresorerie (1 ecriture) :
+    Debit  6611 Remunerations / Credit 5711 Caisse
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6611 Remunerations / Credit 422 Personnel du — Libelle : S/Engagement
+    Debit  422 Personnel du / Credit 5711 Caisse — Libelle : S/Paiement
+
+E17 — Cotisations sociales patronales par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6641 Charges sociales / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6641 Charges sociales / Credit 4318 Securite sociale — Libelle : S/Engagement
+    Debit  4318 Securite sociale / Credit 5211 Banque — Libelle : S/Paiement
+
+E19 — Honoraires predicateur invite par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6057 Honoraires / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6057 Honoraires / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5211 Banque — Libelle : S/Paiement
+
+E20 — Frais deplacement mission evangelisation en caisse :
+  Tresorerie (1 ecriture) :
+    Debit  6181 Voyages et Deplacements / Credit 5711 Caisse
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6181 Voyages et Deplacements / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5711 Caisse — Libelle : S/Paiement
+
+E20b — Facture electricite par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6052 Electricite / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6052 Electricite / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5211 Banque — Libelle : S/Paiement
+
+E21 — Facture eau en caisse :
+  Tresorerie (1 ecriture) :
+    Debit  6051 Eau / Credit 5711 Caisse
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6051 Eau / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5711 Caisse — Libelle : S/Paiement
+
+E21b — Facture internet en caisse :
+  Tresorerie (1 ecriture) :
+    Debit  6288 Autres frais telecommunications / Credit 5711 Caisse
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6288 Autres frais telecommunications / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5711 Caisse — Libelle : S/Paiement
+
+E21c — Facture essence/gazoil en caisse :
+  Tresorerie (1 ecriture) :
+    Debit  6053 Autres energies / Credit 5711 Caisse
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6053 Autres energies / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5711 Caisse — Libelle : S/Paiement
+
+E22 — Frais bancaires commission :
+  Tresorerie ET Engagement (1 ecriture) :
+    Debit  6318 Services bancaires / Credit 5211 Banque
+    Libelle : S/Paiement
+
+E23 — Versement subvention a une association par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6520 Subventions versees / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6520 Subventions versees / Credit 4712 Crediteurs divers — Libelle : S/Engagement
+    Debit  4712 Crediteurs divers / Credit 5211 Banque — Libelle : S/Paiement
+
+E24 — Achat vivres repas communautaire par banque :
+  Tresorerie (1 ecriture) :
+    Debit  6046 Fournitures de magasin / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  6046 Fournitures de magasin / Credit 4011 Fournisseur — Libelle : S/Engagement
+    Debit  4011 Fournisseur / Credit 5211 Banque — Libelle : S/Paiement
+
+=== OPERATIONS EN CAPITAL ===
+
+C01 — Acquisition bien immobilier edifice par banque :
+  Tresorerie (1 ecriture) :
+    Debit  2317 Edifices religieux / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  2317 Edifices religieux / Credit 4812 Fournisseurs investissement — Libelle : S/Engagement
+    Debit  4812 Fournisseurs investissement / Credit 5211 Banque — Libelle : S/Paiement
+
+C01b — Conception logiciel par banque :
+  Tresorerie (1 ecriture) :
+    Debit  2131 Logiciels / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  2131 Logiciels / Credit 4811 Fournisseurs investissement immo incorporelle — Libelle : S/Engagement
+    Debit  4811 Fournisseurs investissement / Credit 5211 Banque — Libelle : S/Paiement
+
+C02 — Emprunt bancaire pour construction :
+  Tresorerie ET Engagement (1 ecriture) :
+    Debit  5211 Banque / Credit 182 Emprunt bancaire
+    Libelle : S/Encaissement emprunt
+
+C04 — Achat mobilier religieux par banque :
+  Tresorerie (1 ecriture) :
+    Debit  2443 Materiel et mobilier religieux / Credit 5211 Banque
+    Libelle : S/Paiement
+  Engagement (2 ecritures) :
+    Debit  2443 Materiel et mobilier religieux / Credit 4812 Fournisseurs investissement — Libelle : S/Engagement
+    Debit  4812 Fournisseurs investissement / Credit 5211 Banque — Libelle : S/Paiement
+
+C05 — Avance sur salaire accordee en caisse :
+  Tresorerie ET Engagement (1 ecriture) :
+    Debit  422 Personnel du / Credit 5711 Caisse
+    Libelle : S/Paiement avance
+
+REGLE ABSOLUE SUR LES ECRITURES :
+- Remplace X par le montant exact mentionne par l'utilisateur
+- Ne changes JAMAIS les numeros de comptes
+- Si l'operation ne correspond a aucune ecriture ci-dessus, dis :
+  "Cette operation n'est pas encore dans ma base d'ecritures.
+   Veuillez contacter un expert-comptable."
 
 DISTINCTIONS OBLIGATOIRES :
 1. LIVRES COMPTABLES OBLIGATOIRES (exactement 4) :
