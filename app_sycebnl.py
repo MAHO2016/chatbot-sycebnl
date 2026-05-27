@@ -449,8 +449,6 @@ Article 28
 Le présent Acte uniforme, auquel est annexé le système comptable des entités à but non lucratif, sera publié au Journal Officiel de l'OHADA dans un délai de soixante (60) jours à compter de la date de son adoption. Il sera également publié dans les États parties au Journal Officiel ou par tout autre moyen approprié.
 Le présent Acte uniforme est applicable à compter du 1er janvier 2024.
 
-
-LOI_ASSOCIATIONS_BENIN = """
 Article premier : Au sens de la présente loi, les termes ci-après sont définis comme suit :
 association : convention par laquelle deux ou plusieurs personnes physiques ou morales mettent en commun, d'une façon autonome et permanente, leurs connaissances, leurs moyens ou leurs activités, dans un but autre que de partager des bénéfices.
 - association artistique et culturelle : association poursuivant des objectifs se rattachant aux arts et à la culture.
