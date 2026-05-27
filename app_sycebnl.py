@@ -458,7 +458,7 @@ DISPOSITIONS GÉNÉRALES COMMUNES AUX ASSOCIATIONS ET AUX FONDATIONS
 
 --- CHAPITRE I : DÉFINITIONS ---
 
-Article 1er : Au sens de la présente loi, les termes ci-après sont définis comme suit :
+Article premier : Au sens de la présente loi, les termes ci-après sont définis comme suit :
 - association : convention par laquelle deux ou plusieurs personnes physiques ou morales mettent en commun, d'une façon autonome et permanente, leurs connaissances, leurs moyens ou leurs activités, dans un but autre que de partager des bénéfices.
 - association artistique et culturelle : association poursuivant des objectifs se rattachant aux arts et à la culture.
 - association de base : association constituée, non membre d'une autre.
