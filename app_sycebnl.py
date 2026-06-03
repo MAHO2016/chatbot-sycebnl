@@ -152,6 +152,19 @@ SENTIMENTS = {
     "bonne journee": "Merci, bonne journee a vous egalement ! Je reste disponible pour toute question sur le SYCEBNL.",
     "qui es-tu": "Je suis ExpertAsso, un assistant IA specialise dans le SYCEBNL (Systeme Comptable des Entites a But Non Lucratif), la loi sur les associations au Benin et la fiscalite (CGI Benin 2026). Je suis developpe par ComptaProgresso pour accompagner les associations dans leur gestion comptable et administrative.",
     "que peux-tu faire": "Je peux vous aider sur : les obligations comptables des associations (SYCEBNL), la legislation des associations au Benin, les questions fiscales (CGI Benin 2026), les livres comptables obligatoires, les ecritures comptables et bien plus encore !",
+    "s'il vous plait": "Bien sur ! Je suis la pour vous aider. Quelle est votre question sur le SYCEBNL ou la legislation des associations ?",
+    "excusez-moi": "Pas de souci ! Comment puis-je vous aider ?",
+    "je ne comprends pas": "Je vais essayer d'etre plus clair. N'hesitez pas a me poser votre question autrement et je ferai de mon mieux pour vous expliquer simplement.",
+    "pouvez-vous repeter": "Bien sur ! Posez-moi a nouveau votre question et je vous repondrai avec plaisir.",
+    "aidez-moi": "Je suis la pour vous aider ! Posez-moi votre question sur le SYCEBNL, la loi sur les associations ou la fiscalite au Benin.",
+    "c'est complique": "Je comprends ! La comptabilite des associations peut sembler complexe. N'hesitez pas a me poser des questions simples et je vous expliquerai etape par etape.",
+    "je ne sais pas": "Pas de probleme ! Dites-moi ce que vous cherchez et je vous guiderai.",
+    "comment ca marche": "Je suis ExpertAsso, votre assistant specialise SYCEBNL. Posez-moi une question sur la comptabilite des associations, la loi ou la fiscalite au Benin et je vous repondrai immediatement !",
+    "felicitations": "Merci beaucoup ! C'est un plaisir de vous accompagner dans votre comprehension du SYCEBNL.",
+    "bonne semaine": "Merci, bonne semaine a vous egalement ! Je reste disponible pour toute question.",
+    "bonne annee": "Bonne annee a vous aussi ! Que cette annee soit riche en succes pour votre association.",
+    "joyeux noel": "Joyeux Noel ! Je reste disponible pour toute question sur le SYCEBNL.",
+    "bonne fete": "Merci et bonne fete a vous egalement !",
 }
 
 def detecter_sentiment(question):
@@ -1447,7 +1460,38 @@ if "messages" not in st.session_state:
 
 if "nombre_questions" not in st.session_state:
     st.session_state.nombre_questions = 0
+    
+# === QUESTIONS FREQUENTES ===
+if len(st.session_state.messages) == 0:
+    st.markdown("**Questions frequentes — cliquez pour poser directement :**")
+    col1, col2, col3 = st.columns(3)
 
+    with col1:
+        if st.button("📚 Livres comptables obligatoires"):
+            st.session_state.question_rapide = "Quels sont les livres comptables obligatoires selon le SYCEBNL ?"
+        if st.button("💰 Fiscalite des associations"):
+            st.session_state.question_rapide = "Quels impots une association doit-elle payer au Benin ?"
+        if st.button("📝 Creer une association au Benin"):
+            st.session_state.question_rapide = "Quels sont les documents pour creer une association au Benin ?"
+
+    with col2:
+        if st.button("🏦 Etats financiers SYCEBNL"):
+            st.session_state.question_rapide = "Quels sont les etats financiers obligatoires selon le SYCEBNL ?"
+        if st.button("✍️ Ecriture don en especes"):
+            st.session_state.question_rapide = "Quelle est l'ecriture comptable pour un don recu en especes ?"
+        if st.button("📊 Difference SN et SMT"):
+            st.session_state.question_rapide = "Quelle est la difference entre le systeme normal et le SMT ?"
+
+    with col3:
+        if st.button("⚖️ Auditeur obligatoire"):
+            st.session_state.question_rapide = "Quand une association est-elle obligee de designer un auditeur ?"
+        if st.button("🧾 Registre des donateurs"):
+            st.session_state.question_rapide = "Qu'est-ce que le registre des donateurs et quand est-il obligatoire ?"
+        if st.button("💼 Exoneration IS association"):
+            st.session_state.question_rapide = "Une association est-elle exoneree de l'impot sur les societes au Benin ?")
+
+    st.divider()
+    
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
@@ -1455,6 +1499,27 @@ for message in st.session_state.messages:
 questions_restantes = MAX_MESSAGES - st.session_state.nombre_questions
 if questions_restantes <= 5:
     st.warning(f"Il vous reste {questions_restantes} question(s) dans cette session.")
+# Traiter question rapide si bouton clique
+if "question_rapide" not in st.session_state:
+    st.session_state.question_rapide = None
+
+if st.session_state.question_rapide:
+    question = st.session_state.question_rapide
+    st.session_state.question_rapide = None
+    st.session_state.messages.append({"role": "user", "content": question})
+    with st.chat_message("user"):
+        st.markdown(question)
+    with st.chat_message("assistant"):
+        with st.spinner("Recherche en cours..."):
+            reponse = generer_reponse(
+                llm, retriever,
+                st.session_state.messages,
+                question
+            )
+        st.markdown(reponse)
+    st.session_state.messages.append({"role": "assistant", "content": reponse})
+    st.session_state.nombre_questions += 1
+    st.rerun()
 
 if question := st.chat_input("Posez votre question sur le SYCEBNL..."):
     if st.session_state.nombre_questions >= MAX_MESSAGES:
