@@ -1488,7 +1488,7 @@ if len(st.session_state.messages) == 0:
         if st.button("🧾 Registre des donateurs"):
             st.session_state.question_rapide = "Qu'est-ce que le registre des donateurs et quand est-il obligatoire ?"
         if st.button("💼 Exoneration IS association"):
-            st.session_state.question_rapide = "Une association est-elle exoneree de l'impot sur les societes au Benin ?")
+            st.session_state.question_rapide = "Une association est-elle exoneree de l'impot sur les societes au Benin ?"
 
     st.divider()
     
