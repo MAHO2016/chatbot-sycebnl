@@ -688,7 +688,6 @@ Article 79 : Toute association reconnue d'utilité publique peut bénéficier d'
   * les dons et legs.
 
 Article 80 : L'État conclut de plein droit un accord de siège avec toute association étrangère reconnue d'utilité publique. L'accord de siège stipule les avantages notamment douaniers et fiscaux accordés à l'association.
-
 Article 81 : L'État ou une collectivité territoriale peut déléguer, par entente directe et sans appliquer les procédures de passation des marchés publics, la gestion d'un service public à une association reconnue d'utilité publique contre rémunération sur la base d'une convention de délégation de service public.
 
 Article 82 : Toute association reconnue d'utilité publique peut ester en justice pour la défense de cause relevant de l'intérêt général. Les sommes reçues à titre de réparation dans ce cas sont versées au Trésor public.
